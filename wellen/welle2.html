@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welle 2 – Stärke durch Disziplin | Die Welle Escape Game</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="../index.html" class="site-title">
+      <span>Die</span> Welle
+      <span class="site-title__sub" style="font-size:0.55em; display:block; letter-spacing:0.1em; color:var(--color-highlight); font-family:Georgia,serif; font-weight:normal; text-transform:none;">Welle 2 von 7</span>
+    </a>
+    <div class="header-controls">
+      <button class="btn btn--sound" id="sound-toggle" title="Sound umschalten" aria-label="Sound umschalten">🔊</button>
+      <a href="../index.html" class="btn btn--ghost" style="font-size:0.75rem;">← Übersicht</a>
+    </div>
+  </div>
+</header>
+
+<div class="wave-header">
+  <div class="container--narrow">
+    <p class="wave-header__meta">Welle 2 · ★☆☆ bis ★★★</p>
+    <h1 class="wave-header__title">Stärke durch Disziplin</h1>
+    <p class="wave-header__subtitle">Regeln, Haltung, Konditionierung – die Welle nimmt Form an.</p>
+  </div>
+</div>
+
+<main>
+<div class="container--narrow" style="padding-top:1.5rem; padding-bottom:3rem;">
+
+  <div class="collapsible">
+    <button class="collapsible__trigger" aria-expanded="false">
+      Lernziele dieser Welle
+      <span class="collapsible__arrow" aria-hidden="true">▼</span>
+    </button>
+    <div class="collapsible__body">
+      <ul style="list-style:disc; padding-left:1.2rem; color:var(--color-highlight); font-size:0.92rem; line-height:1.8;">
+        <li>Mechanismen der Konditionierung durch Wiederholung und Körperhaltung verstehen</li>
+        <li>Roberts Wandlung als Fallbeispiel für soziale Inklusion durch Konformität analysieren</li>
+        <li>Erste Warnsignale der Welle erkennen</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="context-box" role="region" aria-label="Kontext der Welle">
+    <p>Herr Rossi gibt dem Experiment einen Namen: <em>„Die Welle"</em>. Das erste Motto lautet „Stärke durch Disziplin". Die Schüler:innen sitzen jetzt aufrecht, sprechen in vollständigen Sätzen, stehen auf, wenn sie reden.</p>
+    <p>Etwas Merkwürdiges geschieht: Die Klasse ist konzentrierter als je zuvor. Und Robert Billings – der Schüler, den alle ignorierten – blüht plötzlich auf. Doch Laurie wird immer unruhiger.</p>
+  </div>
+
+  <!-- TASK 1 – MC -->
+  <article class="task-block" id="task-block-1" aria-labelledby="task1-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 1</span>
+      <h2 class="task__title" id="task1-title">Das erste Motto</h2>
+      <span class="task__difficulty">★☆☆</span>
+    </div>
+    <p class="task__question">Was lautet das erste offizielle Motto der Welle?</p>
+
+    <ul class="mc-options" role="radiogroup">
+      <li class="mc-option">
+        <input type="radio" name="mc1" id="mc1-a" value="0">
+        <label for="mc1-a">a) Stärke durch Einheit</label>
+      </li>
+      <li class="mc-option">
+        <input type="radio" name="mc1" id="mc1-b" value="1">
+        <label for="mc1-b">b) Stärke durch Disziplin</label>
+      </li>
+      <li class="mc-option">
+        <input type="radio" name="mc1" id="mc1-c" value="2">
+        <label for="mc1-c">c) Macht durch Gehorsam</label>
+      </li>
+      <li class="mc-option">
+        <input type="radio" name="mc1" id="mc1-d" value="3">
+        <label for="mc1-d">d) Freiheit durch Ordnung</label>
+      </li>
+    </ul>
+    <button class="btn btn--primary mt-2 mc-submit" id="mc1-submit">Antwort prüfen</button>
+  </article>
+
+  <!-- TASK 2 – TF -->
+  <article class="task-block task--locked" id="task-block-2" aria-labelledby="task2-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 2</span>
+      <h2 class="task__title" id="task2-title">Richtig oder Falsch?</h2>
+      <span class="task__difficulty">★☆☆</span>
+    </div>
+    <p class="task__question">Beurteile die Aussagen über Welle 2.</p>
+
+    <table class="tf-table" role="table">
+      <thead><tr><th scope="col">Aussage</th><th scope="col">Antwort</th></tr></thead>
+      <tbody>
+        <tr class="tf-row">
+          <td>Robert Billings war vor der Welle ein beliebter und angesehener Schüler in der Klasse.</td>
+          <td><div class="tf-buttons">
+            <button class="tf-btn" data-val="r">Richtig</button>
+            <button class="tf-btn" data-val="f">Falsch</button>
+          </div></td>
+        </tr>
+        <tr class="tf-row">
+          <td>Das Sitzen in gerader, aufrechter Haltung ist eine der ersten Regeln der Welle.</td>
+          <td><div class="tf-buttons">
+            <button class="tf-btn" data-val="r">Richtig</button>
+            <button class="tf-btn" data-val="f">Falsch</button>
+          </div></td>
+        </tr>
+        <tr class="tf-row">
+          <td>Ben Ross beobachtet sein Experiment kritisch und beginnt zu zweifeln.</td>
+          <td><div class="tf-buttons">
+            <button class="tf-btn" data-val="r">Richtig</button>
+            <button class="tf-btn" data-val="f">Falsch</button>
+          </div></td>
+        </tr>
+        <tr class="tf-row">
+          <td>Die Schüler marschieren gemeinsam durch den Schulflur im Gleichschritt.</td>
+          <td><div class="tf-buttons">
+            <button class="tf-btn" data-val="r">Richtig</button>
+            <button class="tf-btn" data-val="f">Falsch</button>
+          </div></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn--primary mt-2 tf-submit" id="tf2-submit">Antworten prüfen</button>
+  </article>
+
+  <!-- TASK 3 – Assignment -->
+  <article class="task-block task--locked" id="task-block-3" aria-labelledby="task3-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 3</span>
+      <h2 class="task__title" id="task3-title">Konzepte zuordnen</h2>
+      <span class="task__difficulty">★★☆</span>
+    </div>
+    <p class="task__question">Ordne die Beschreibungen den richtigen Begriffen oder Figuren zu.</p>
+
+    <div class="assignment-area">
+      <div class="assignment-source">
+        <h4>Beschreibungen</h4>
+        <div id="assign3-source">
+          <div class="dnd-item" draggable="true" data-value="Stärke durch Disziplin">Stärke durch Disziplin</div>
+          <div class="dnd-item" draggable="true" data-value="Aufrechte Körperhaltung">Aufrechte Körperhaltung</div>
+          <div class="dnd-item" draggable="true" data-value="Robert Billings">Robert Billings</div>
+          <div class="dnd-item" draggable="true" data-value="Skepsis und Unwohlsein">Skepsis und Unwohlsein</div>
+        </div>
+      </div>
+      <div class="assignment-targets">
+        <h4>Zielfelder</h4>
+        <div class="assign-target-row">
+          <div class="assign-label">Das erste Motto</div>
+          <div class="assign-drop" data-expected="Stärke durch Disziplin"></div>
+        </div>
+        <div class="assign-target-row">
+          <div class="assign-label">Äußeres Erkennungsmerkmal</div>
+          <div class="assign-drop" data-expected="Aufrechte Körperhaltung"></div>
+        </div>
+        <div class="assign-target-row">
+          <div class="assign-label">Veränderter Schüler</div>
+          <div class="assign-drop" data-expected="Robert Billings"></div>
+        </div>
+        <div class="assign-target-row">
+          <div class="assign-label">Lauries Reaktion</div>
+          <div class="assign-drop" data-expected="Skepsis und Unwohlsein"></div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn--primary mt-2 assign-submit" id="assign3-submit">Zuordnung prüfen</button>
+  </article>
+
+  <!-- TASK 4 – Sorting -->
+  <article class="task-block task--locked" id="task-block-4" aria-labelledby="task4-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 4</span>
+      <h2 class="task__title" id="task4-title">Ereignisse sortieren</h2>
+      <span class="task__difficulty">★★☆</span>
+    </div>
+    <p class="task__question">Bringe die Ereignisse aus Welle 2 in die richtige Reihenfolge.</p>
+
+    <ul class="sort-list" id="sort4-list">
+      <li class="sort-item" data-value="B" draggable="true">
+        <span class="sort-num">1</span>
+        <span>Schüler:innen lernen das erste Motto „Stärke durch Disziplin"</span>
+      </li>
+      <li class="sort-item" data-value="D" draggable="true">
+        <span class="sort-num">2</span>
+        <span>Die Schüler:innen üben kollektives Sprechen und Antworten im Chor</span>
+      </li>
+      <li class="sort-item" data-value="A" draggable="true">
+        <span class="sort-num">3</span>
+        <span>Ross führt die aufrechte Sitzhaltung als erste Regel ein</span>
+      </li>
+      <li class="sort-item" data-value="C" draggable="true">
+        <span class="sort-num">4</span>
+        <span>Robert Billings wird zu einem begeisterten Mitglied der Welle</span>
+      </li>
+    </ul>
+    <button class="btn btn--primary mt-2 sort-submit" id="sort4-submit">Reihenfolge prüfen</button>
+  </article>
+
+  <!-- TASK 5 – MS -->
+  <article class="task-block task--locked" id="task-block-5" aria-labelledby="task5-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 5</span>
+      <h2 class="task__title" id="task5-title">Analyse: Roberts Wandlung</h2>
+      <span class="task__difficulty">★★★</span>
+    </div>
+    <p class="task__question">Warum fühlt sich Robert Billings durch die Welle plötzlich wohl und akzeptiert? Wähle <strong>alle</strong> zutreffenden Gründe aus und begründe deine Antwort.</p>
+
+    <ul class="ms-options" role="group">
+      <li class="ms-option">
+        <input type="checkbox" id="ms5-0" value="0">
+        <label for="ms5-0">Er hat erstmals ein Gefühl echter Zugehörigkeit zu einer Gruppe</label>
+      </li>
+      <li class="ms-option">
+        <input type="checkbox" id="ms5-1" value="1">
+        <label for="ms5-1">Die Regeln der Welle gelten für alle gleich – niemand ist besser als der andere</label>
+      </li>
+      <li class="ms-option">
+        <input type="checkbox" id="ms5-2" value="2">
+        <label for="ms5-2">Er bekommt Anerkennung, wenn er sich anpasst und die Regeln befolgt</label>
+      </li>
+      <li class="ms-option">
+        <input type="checkbox" id="ms5-3" value="3">
+        <label for="ms5-3">Er ist besonders intelligent und durchschaut das Experiment sofort</label>
+      </li>
+      <li class="ms-option">
+        <input type="checkbox" id="ms5-4" value="4">
+        <label for="ms5-4">Er manipuliert andere Schüler:innen, um Einfluss zu gewinnen</label>
+      </li>
+    </ul>
+
+    <label for="ms5-text" style="font-size:0.85rem; color:var(--color-highlight); display:block; margin-top:0.5rem;">Begründung:</label>
+    <textarea class="ms-textarea" id="ms5-text" placeholder="Was sagt Roberts Wandlung über das menschliche Bedürfnis nach Zugehörigkeit aus?"></textarea>
+
+    <div class="tip-section">
+      <button class="tip-request-btn" id="tip5-1" style="display:none;">★ Tipp 1</button>
+      <div class="tip-box tip-box-1" id="tip-box5-1">
+        <strong>Tipp 1:</strong> Überlege: Wie war Roberts Status in der Klasse <em>vor</em> der Welle? Was hat sich verändert – und warum?
+      </div>
+      <button class="tip-request-btn" id="tip5-2" style="display:none; margin-top:0.4rem;">★★ Tipp 2</button>
+      <div class="tip-box tip-box-2" id="tip-box5-2">
+        <strong>Tipp 2:</strong> In der Welle spielt es keine Rolle, wer du warst. Jede:r, der die Regeln befolgt, ist gleichwertig. Das ist für Robert ein völlig neues Gefühl.
+      </div>
+    </div>
+    <button class="btn btn--primary mt-2 ms-submit" id="ms5-submit">Auswahl prüfen</button>
+  </article>
+
+  <!-- Code Challenge -->
+  <section class="code-challenge hidden" id="code-challenge-section" aria-labelledby="code-title">
+    <h3 id="code-title">Codewort-Rätsel</h3>
+    <div class="code-challenge__clue">
+      „Das Motto dieser Welle nennt exakt das Wort, das Kapitel 2 beschreibt. Es steht für das strenge Einhalten von Regeln, pünktliches Erscheinen, aufrechte Haltung und das Befolgen von Befehlen ohne Widerspruch. Dieses Wort ist das Herzstück des ersten Mottos – und das Codewort dieser Welle."
+    </div>
+    <div class="code-input-row">
+      <input type="text" class="code-input" placeholder="CODEWORT EINGEBEN" maxlength="20" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Codewort eingeben">
+      <button class="btn btn--danger code-submit">Codewort prüfen</button>
+    </div>
+    <div class="feedback code-feedback" style="margin-top:0.8rem;" role="alert" aria-live="polite"></div>
+  </section>
+
+  <div class="wave-complete-banner" id="wave-complete-banner" role="alert" aria-live="polite">
+    <h2>Welle 2 abgeschlossen!</h2>
+    <p>Das Archiv öffnet sich. Die nächste Mappe liegt bereit …</p>
+    <div class="unlock-code-display"></div>
+    <p style="font-size:0.88rem; color:var(--color-highlight); margin-bottom:1rem;">Das Codewort beschreibt das erste Motto der Welle.</p>
+    <a href="welle3.html" class="btn btn--primary next-wave-btn hidden">Weiter zu Welle 3 →</a>
+    <a href="../index.html" class="btn btn--ghost" style="margin-left:0.5rem;">← Übersicht</a>
+  </div>
+
+  <div class="reflection-box">
+    <h3>Reflexion</h3>
+    <p style="color:var(--color-highlight); font-size:0.9rem; margin-bottom:0.6rem;">Kannst du Situationen aus deinem eigenen Leben benennen, in denen Regeln und Disziplin ein Gefühl von Stärke oder Zusammenhalt erzeugt haben? Wann ist das positiv, wann gefährlich?</p>
+    <textarea class="reflection-textarea" placeholder="Deine Gedanken …"></textarea>
+  </div>
+
+  <nav class="nav-back">
+    <a href="welle1.html" class="btn btn--ghost">← Welle 1</a>
+    <a href="../index.html" class="btn btn--ghost">Übersicht</a>
+    <a href="welle3.html" class="btn btn--ghost">Welle 3 →</a>
+  </nav>
+
+</div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container"><p>„Die Welle" Escape Game · Welle 2: Stärke durch Disziplin</p></div>
+</footer>
+
+<script src="../js/sound.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/aufgaben.js"></script>
+<script>
+  const WAVE_N = 2;
+
+  document.querySelectorAll('.collapsible__trigger').forEach(t => {
+    t.addEventListener('click', () => {
+      const open = t.getAttribute('aria-expanded') === 'true';
+      t.setAttribute('aria-expanded', !open);
+      t.nextElementSibling.classList.toggle('open', !open);
+    });
+  });
+
+  if (!DW.isWaveUnlocked(WAVE_N)) window.location.href = '../index.html';
+
+  Aufgaben.initWavePage(WAVE_N);
+  Aufgaben.initMC(WAVE_N, 1, 1);
+  Aufgaben.initTF(WAVE_N, 2, ['f','r','r','r']);
+  Aufgaben.initAssignment(WAVE_N, 3, []);
+  Aufgaben.initSorting(WAVE_N, 4, ['A','B','C','D']);
+  Aufgaben.initMS(WAVE_N, 5, [0,1,2], true);
+
+  (function() {
+    const block = document.getElementById('task-block-5');
+    if (!block) return;
+    const t1 = block.querySelector('#tip5-1'), b1 = block.querySelector('#tip-box5-1');
+    const t2 = block.querySelector('#tip5-2'), b2 = block.querySelector('#tip-box5-2');
+    if (t1 && b1) {
+      setTimeout(() => { t1.style.display='inline-block'; }, 60000);
+      t1.addEventListener('click', () => { b1.classList.add('show'); t1.style.display='none'; });
+    }
+    if (t2 && b2) {
+      setTimeout(() => { t2.style.display='inline-block'; }, 120000);
+      t2.addEventListener('click', () => { b2.classList.add('show'); t2.style.display='none'; });
+    }
+  })();
+
+  Aufgaben.initCodeChallenge(WAVE_N, 'DISZIPLIN');
+</script>
+</body>
+</html>

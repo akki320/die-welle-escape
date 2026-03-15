@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Die Welle – Escape Game | Jahrgang 9</title>
+  <meta name="description" content="Interaktives Escape Game zum Roman ‚Die Welle' von Morton Rhue – für den Deutschunterricht Jahrgang 9, E-Kurs.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ===== SITE HEADER ===== -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="index.html" class="site-title">
+      <span>Die</span> Welle <span class="site-title__sub" style="font-size:0.55em; display:block; letter-spacing:0.1em; color:var(--color-highlight); font-family:Georgia,serif; font-weight:normal; text-transform:none;">Escape Game · Jahrgang 9</span>
+    </a>
+    <div class="header-controls">
+      <button class="btn btn--sound" id="sound-toggle" title="Sound umschalten" aria-label="Sound umschalten">🔊</button>
+      <a href="lehrer.html" class="btn btn--ghost" style="font-size:0.75rem;">Lehrerbereich</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<main>
+<section class="hero">
+  <div class="container">
+    <p class="hero__eyebrow">Palo Alto, Kalifornien · 1969 · Gordon High School</p>
+    <h1 class="hero__title">
+      Das versiegelte Archiv
+      <span class="subtitle">Sieben Wellen · Sieben Geheimnisse</span>
+    </h1>
+    <div class="hero__intro">
+      <p>Es ist 1969. Du bist neu an der Gordon High School in Palo Alto, Kalifornien. Eine merkwürdige Bewegung greift um sich – Schüler:innen gehorchen blinden Befehlen, Freundschaften zerbrechen, Andersdenkende werden gemobbt.</p>
+      <p>Als du ein versiegeltes Archiv mit sieben geheimen Mappen entdeckst, beginnst du zu verstehen, was hier wirklich passiert. Löse die Rätsel in allen sieben Wellen, bevor <strong>Die Welle</strong> alles verschlingt.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Wave SVG divider -->
+<div class="wave-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C150,60 350,0 600,30 C850,60 1050,0 1200,30 L1200,60 L0,60 Z" fill="#0f0f1f"/>
+  </svg>
+</div>
+
+<!-- ===== PROGRESS ===== -->
+<section class="progress-section" aria-label="Fortschritt">
+  <div class="container--narrow">
+    <div class="progress-label">
+      <span style="font-family:var(--font-headline); font-size:0.78rem; text-transform:uppercase; letter-spacing:0.15em; color:var(--color-highlight);">Fortschritt</span>
+      <span id="progress-label" style="font-family:var(--font-headline); font-size:0.78rem; color:var(--color-highlight);">0 / 7 Wellen abgeschlossen</span>
+    </div>
+    <div class="progress-bar-track" role="progressbar" aria-valuemin="0" aria-valuemax="7" aria-valuenow="0" aria-label="Abgeschlossene Wellen">
+      <div class="progress-bar-fill" id="progress-fill"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STAMP COLLECTION ===== -->
+<section class="stamp-section" aria-label="Stempel-Sammlung">
+  <div class="container">
+    <h3>Gesammelte Stempel</h3>
+    <div class="stamps-row" role="list" aria-label="Abgeschlossene Wellen als Stempel">
+      <div class="stamp-item" id="stamp-1" role="listitem" title="Welle 1 – Der Funke">W1</div>
+      <div class="stamp-item" id="stamp-2" role="listitem" title="Welle 2 – Stärke durch Disziplin">W2</div>
+      <div class="stamp-item" id="stamp-3" role="listitem" title="Welle 3 – Stärke durch Gemeinschaft">W3</div>
+      <div class="stamp-item" id="stamp-4" role="listitem" title="Welle 4 – Stärke durch Handeln">W4</div>
+      <div class="stamp-item" id="stamp-5" role="listitem" title="Welle 5 – Die Andersdenkenden">W5</div>
+      <div class="stamp-item" id="stamp-6" role="listitem" title="Welle 6 – Der Sog">W6</div>
+      <div class="stamp-item" id="stamp-7" role="listitem" title="Welle 7 – Das Ende der Welle">W7</div>
+    </div>
+  </div>
+</section>
+
+<!-- Wave SVG divider -->
+<div class="wave-divider" aria-hidden="true" style="transform: scaleY(-1); margin-bottom: -1px;">
+  <svg viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C200,0 400,60 600,30 C800,0 1000,60 1200,30 L1200,60 L0,60 Z" fill="#0f0f1f"/>
+  </svg>
+</div>
+
+<!-- ===== WAVE TILES ===== -->
+<section class="waves-section" aria-label="Die sieben Wellen">
+  <div class="container">
+    <h2>Die sieben Mappen</h2>
+    <div class="waves-grid" role="list">
+
+      <!-- WAVE 1 -->
+      <a href="wellen/welle1.html" class="wave-tile wave-tile--available" id="wave-tile-1" role="listitem" aria-label="Welle 1 – Der Funke">
+        <div class="wave-tile__tab" aria-hidden="true"></div>
+        <span class="wave-tile__number">Welle 1</span>
+        <span class="wave-tile__title">Der Funke</span>
+        <span class="wave-tile__focus">Kontext: Drittes Reich, Bens Unterrichtsexperiment beginnt</span>
+        <div class="wave-tile__status">
+          <div class="wave-tile__status-icon"><div class="open-icon" aria-hidden="true">▶</div></div>
+          <span class="wave-tile__status-text">Offen – betreten</span>
+        </div>
+      </a>
+
+      <!-- WAVE 2 -->
+      <a href="wellen/welle2.html" class="wave-tile wave-tile--locked" id="wave-tile-2" role="listitem" aria-label="Welle 2 – Stärke durch Disziplin">
+        <div class="wave-tile__tab" aria-hidden="true"></div>
+        <span class="wave-tile__number">Welle 2</span>
+        <span class="wave-tile__title">Stärke durch Disziplin</span>
+        <span class="wave-tile__focus">Regeln, Haltung, Konditionierung – Beginn der Welle</span>
+        <div class="wave-tile__status">
+          <div class="wave-tile__status-icon"><div class="seal-icon" aria-hidden="true"></div></div>
+          <span class="wave-tile__status-text">Gesperrt – löse Welle 1</span>
+        </div>
+      </a>
+
+      <!-- WAVE 3 -->
+      <a href="wellen/welle3.html" class="wave-tile wave-tile--locked" id="wave-tile-3" role="listitem" aria-label="Welle 3 – Stärke durch Gemeinschaft">
+        <div class="wave-tile__tab" aria-hidden="true"></div>
+        <span class="wave-tile__number">Welle 3</span>
+        <span class="wave-tile__title">Stärke durch Gemeinschaft</span>
+        <span class="wave-tile__focus">Gruppenidentität, Gruß, Konformität</span>
+        <div class="wave-tile__status">
+          <div class="wave-tile__status-icon"><div class="seal-icon" aria-hidden="true"></div></div>
+          <span class="wave-tile__status-text">Gesperrt – löse Welle 2</span>
+        </div>
+      </a>
+
+      <!-- WAVE 4 -->
+      <a href="wellen/welle4.html" class="wave-tile wave-tile--locked" id="wave-tile-4" role="listitem" aria-label="Welle 4 – Stärke durch Handeln">
+        <div class="wave-tile__tab" aria-hidden="true"></div>
+        <span class="wave-tile__number">Welle 4</span>
+        <span class="wave-tile__title">Stärke durch Handeln</span>
+        <span class="wave-tile__focus">Mitgliedsausweise, Verbreitung, erste Gewalt</span>
+        <div class="wave-tile__status">
+          <div class="wave-tile__status-icon"><div class="seal-icon" aria-hidden="true"></div></div>
+          <span class="wave-tile__status-text">Gesperrt – löse Welle 3</span>
+        </div>
+      </a>
+
+      <!-- WAVE 5 -->
+      <a href="wellen/welle5.html" class="wave-tile wave-tile--locked" id="wave-tile-5" role="listitem" aria-label="Welle 5 – Die Andersdenkenden">
+        <div class="wave-tile__tab" aria-hidden="true"></div>
+        <span class="wave-tile__number">Welle 5</span>
+        <span class="wave-tile__title">Die Andersdenkenden</span>
+        <span class="wave-tile__focus">Laurie, David, Amy – Widerstand und Konsequenzen</span>
+        <div class="wave-tile__status">
+          <div class="wave-tile__status-icon"><div class="seal-icon" aria-hidden="true"></div></div>
+          <span class="wave-tile__status-text">Gesperrt – löse Welle 4</span>
+        </div>
+      </a>
+
+      <!-- WAVE 6 -->
+      <a href="wellen/welle6.html" class="wave-tile wave-tile--locked" id="wave-tile-6" role="listitem" aria-label="Welle 6 – Der Sog">
+        <div class="wave-tile__tab" aria-hidden="true"></div>
+        <span class="wave-tile__number">Welle 6</span>
+        <span class="wave-tile__title">Der Sog</span>
+        <span class="wave-tile__focus">Eskalation, Verrat, Kontrollverlust, Bens Dilemma</span>
+        <div class="wave-tile__status">
+          <div class="wave-tile__status-icon"><div class="seal-icon" aria-hidden="true"></div></div>
+          <span class="wave-tile__status-text">Gesperrt – löse Welle 5</span>
+        </div>
+      </a>
+
+      <!-- WAVE 7 -->
+      <a href="wellen/welle7.html" class="wave-tile wave-tile--locked" id="wave-tile-7" role="listitem" aria-label="Welle 7 – Das Ende der Welle">
+        <div class="wave-tile__tab" aria-hidden="true"></div>
+        <span class="wave-tile__number">Welle 7</span>
+        <span class="wave-tile__title">Das Ende der Welle</span>
+        <span class="wave-tile__focus">Auflösung, Konfrontation, Reflexion, Verantwortung</span>
+        <div class="wave-tile__status">
+          <div class="wave-tile__status-icon"><div class="seal-icon" aria-hidden="true"></div></div>
+          <span class="wave-tile__status-text">Gesperrt – löse Welle 6</span>
+        </div>
+      </a>
+
+    </div><!-- .waves-grid -->
+  </div>
+</section>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p>„Die Welle" · Escape Game für Jahrgang 9, E-Kurs · Basierend auf dem Roman von Morton Rhue (Ron Jones, 1981)</p>
+    <p style="margin-top:0.3rem;">Alle Fortschritte werden lokal in deinem Browser gespeichert (kein Server, kein Tracking).</p>
+  </div>
+</footer>
+
+<script src="js/sound.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

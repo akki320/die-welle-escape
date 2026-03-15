@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welle 7 – Das Ende der Welle | Die Welle Escape Game</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .final-complete {
+      background: linear-gradient(135deg, rgba(45,90,39,0.25), rgba(45,90,39,0.08));
+      border: 2px solid var(--color-success-light);
+      border-radius: 4px;
+      padding: 2.5rem;
+      text-align: center;
+      margin: 2rem 0;
+      display: none;
+    }
+    .final-complete.show { display: block; }
+    .final-complete h2 { color: var(--color-success-light); font-size: 1.6rem; margin-bottom: 0.8rem; }
+    .final-complete .big-stamp {
+      font-family: var(--font-headline);
+      font-size: 2rem;
+      letter-spacing: 0.3em;
+      color: var(--color-accent);
+      border: 3px solid var(--color-success-light);
+      display: inline-block;
+      padding: 0.4rem 1.5rem;
+      margin: 1rem 0;
+      border-radius: 4px;
+      background: rgba(45,90,39,0.15);
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="../index.html" class="site-title">
+      <span>Die</span> Welle
+      <span class="site-title__sub" style="font-size:0.55em; display:block; letter-spacing:0.1em; color:var(--color-highlight); font-family:Georgia,serif; font-weight:normal; text-transform:none;">Welle 7 von 7</span>
+    </a>
+    <div class="header-controls">
+      <button class="btn btn--sound" id="sound-toggle" aria-label="Sound umschalten">🔊</button>
+      <a href="../index.html" class="btn btn--ghost" style="font-size:0.75rem;">← Übersicht</a>
+    </div>
+  </div>
+</header>
+
+<div class="wave-header">
+  <div class="container--narrow">
+    <p class="wave-header__meta">Welle 7 · Die letzte Mappe · ★☆☆ bis ★★★</p>
+    <h1 class="wave-header__title">Das Ende der Welle</h1>
+    <p class="wave-header__subtitle">Auflösung, Konfrontation, Reflexion – und die Frage: Was haben wir daraus gelernt?</p>
+  </div>
+</div>
+
+<main>
+<div class="container--narrow" style="padding-top:1.5rem; padding-bottom:3rem;">
+
+  <div class="collapsible">
+    <button class="collapsible__trigger" aria-expanded="false">
+      Lernziele dieser Welle
+      <span class="collapsible__arrow" aria-hidden="true">▼</span>
+    </button>
+    <div class="collapsible__body">
+      <ul style="list-style:disc; padding-left:1.2rem; color:var(--color-highlight); font-size:0.92rem; line-height:1.8;">
+        <li>Kritisches Denken als aktiven Schutz vor Manipulation verstehen</li>
+        <li>Eigenes Verhalten in der Gruppe reflektieren und historische Verantwortung übernehmen</li>
+        <li>Die Bedeutung von Individualität gegenüber Konformität erkennen</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="context-box">
+    <p>Ben Ross versammelt alle Wellenmitglieder in der Schulaula. Er verspricht, den nationalen Anführer der Welle zu enthüllen. Die Stimmung ist angespannt – elektrisierend. Alle erwarten etwas Großes.</p>
+    <p>Dann verdunkelt sich der Saal. Auf der Leinwand erscheinen keine Bilder eines Führers – sondern Filmaufnahmen von Hitlers Nürnberger Parteitagen. Züge gleichförmiger Gesichter. Salute. Chöre. Das Gleiche, was sie selbst getan haben.</p>
+    <p>Stille. Dann Schluchzen. Robert Billings weint. Laurie und David finden sich wieder. Und Ben Ross sitzt allein in seinem leeren Klassenraum.</p>
+  </div>
+
+  <!-- TASK 1 -->
+  <article class="task-block" id="task-block-1" aria-labelledby="t1-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 1</span>
+      <h2 class="task__title" id="t1-title">Die Enthüllung in der Aula</h2>
+      <span class="task__difficulty">★☆☆</span>
+    </div>
+    <p class="task__question">Was zeigt Ben Ross den versammelten Wellenmitgliedern in der Aula, anstatt des angekündigten nationalen Führers?</p>
+
+    <ul class="mc-options" role="radiogroup">
+      <li class="mc-option"><input type="radio" name="mc1" id="mc1-a" value="0"><label for="mc1-a">a) Eine Liste aller Wellenmitglieder mit ihren Aktivitäten und Vergehen</label></li>
+      <li class="mc-option"><input type="radio" name="mc1" id="mc1-b" value="1"><label for="mc1-b">b) Filmaufnahmen von Hitlers Nürnberger Parteitagen – als Spiegel ihres eigenen Verhaltens</label></li>
+      <li class="mc-option"><input type="radio" name="mc1" id="mc1-c" value="2"><label for="mc1-c">c) Ein Video des amerikanischen Präsidenten, der die Welle lobt</label></li>
+      <li class="mc-option"><input type="radio" name="mc1" id="mc1-d" value="3"><label for="mc1-d">d) Die Aufzeichnungen aller Gespräche, die Ben während des Experiments mitgehört hat</label></li>
+    </ul>
+    <button class="btn btn--primary mt-2 mc-submit" id="mc1-submit">Antwort prüfen</button>
+  </article>
+
+  <!-- TASK 2 -->
+  <article class="task-block task--locked" id="task-block-2" aria-labelledby="t2-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 2</span>
+      <h2 class="task__title" id="t2-title">Richtig oder Falsch?</h2>
+      <span class="task__difficulty">★☆☆</span>
+    </div>
+    <p class="task__question">Beurteile die Aussagen über das Ende der Welle.</p>
+
+    <table class="tf-table" role="table">
+      <thead><tr><th scope="col">Aussage</th><th scope="col">Antwort</th></tr></thead>
+      <tbody>
+        <tr class="tf-row">
+          <td>Ben Ross hatte wirklich einen nationalen Führer für die Welle geplant und organisiert.</td>
+          <td><div class="tf-buttons"><button class="tf-btn" data-val="r">Richtig</button><button class="tf-btn" data-val="f">Falsch</button></div></td>
+        </tr>
+        <tr class="tf-row">
+          <td>Die Schüler:innen sind nach der Enthüllung erschüttert und bestürzt über sich selbst.</td>
+          <td><div class="tf-buttons"><button class="tf-btn" data-val="r">Richtig</button><button class="tf-btn" data-val="f">Falsch</button></div></td>
+        </tr>
+        <tr class="tf-row">
+          <td>Robert Billings bricht in Tränen aus, nachdem die Welle aufgelöst wird.</td>
+          <td><div class="tf-buttons"><button class="tf-btn" data-val="r">Richtig</button><button class="tf-btn" data-val="f">Falsch</button></div></td>
+        </tr>
+        <tr class="tf-row">
+          <td>Laurie und David finden nach der Auflösung wieder zueinander.</td>
+          <td><div class="tf-buttons"><button class="tf-btn" data-val="r">Richtig</button><button class="tf-btn" data-val="f">Falsch</button></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn--primary mt-2 tf-submit" id="tf2-submit">Antworten prüfen</button>
+  </article>
+
+  <!-- TASK 3 -->
+  <article class="task-block task--locked" id="task-block-3" aria-labelledby="t3-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 3</span>
+      <h2 class="task__title" id="t3-title">Reaktionen und Bedeutungen zuordnen</h2>
+      <span class="task__difficulty">★★☆</span>
+    </div>
+    <p class="task__question">Ordne die Beschreibungen den richtigen Elementen der Auflösungsszene zu.</p>
+
+    <div class="assignment-area">
+      <div class="assignment-source">
+        <h4>Beschreibungen</h4>
+        <div id="assign3-source">
+          <div class="dnd-item" draggable="true" data-value="Hitler-Reden als Spiegel der Welle">Hitler-Reden als Spiegel der Welle</div>
+          <div class="dnd-item" draggable="true" data-value="Weinen und Scham">Weinen und Scham</div>
+          <div class="dnd-item" draggable="true" data-value="Parallele zur NS-Zeit zeigen">Parallele zur NS-Zeit zeigen</div>
+          <div class="dnd-item" draggable="true" data-value="Erschütterung und Reflexion">Erschütterung und Reflexion</div>
+        </div>
+      </div>
+      <div class="assignment-targets">
+        <h4>Zielfelder</h4>
+        <div class="assign-target-row">
+          <div class="assign-label">Filmaufnahmen in der Aula</div>
+          <div class="assign-drop" data-expected="Hitler-Reden als Spiegel der Welle"></div>
+        </div>
+        <div class="assign-target-row">
+          <div class="assign-label">Roberts Reaktion</div>
+          <div class="assign-drop" data-expected="Weinen und Scham"></div>
+        </div>
+        <div class="assign-target-row">
+          <div class="assign-label">Bens Absicht</div>
+          <div class="assign-drop" data-expected="Parallele zur NS-Zeit zeigen"></div>
+        </div>
+        <div class="assign-target-row">
+          <div class="assign-label">Reaktion der Schüler:innen</div>
+          <div class="assign-drop" data-expected="Erschütterung und Reflexion"></div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn--primary mt-2 assign-submit" id="assign3-submit">Zuordnung prüfen</button>
+  </article>
+
+  <!-- TASK 4 -->
+  <article class="task-block task--locked" id="task-block-4" aria-labelledby="t4-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 4</span>
+      <h2 class="task__title" id="t4-title">Die Schlussszene sortieren</h2>
+      <span class="task__difficulty">★★☆</span>
+    </div>
+    <p class="task__question">Sortiere die Ereignisse der abschließenden Szene chronologisch.</p>
+
+    <ul class="sort-list" id="sort4-list">
+      <li class="sort-item" data-value="B" draggable="true"><span class="sort-num">1</span><span>Die Schüler:innen erwarten gespannt die Verkündung eines nationalen Führers</span></li>
+      <li class="sort-item" data-value="D" draggable="true"><span class="sort-num">2</span><span>Die Welle wird offiziell und endgültig aufgelöst</span></li>
+      <li class="sort-item" data-value="A" draggable="true"><span class="sort-num">3</span><span>Ben versammelt alle Wellenmitglieder in der Schulaula</span></li>
+      <li class="sort-item" data-value="C" draggable="true"><span class="sort-num">4</span><span>Ben zeigt NS-Propaganda-Aufnahmen statt eines Führers</span></li>
+    </ul>
+    <button class="btn btn--primary mt-2 sort-submit" id="sort4-submit">Reihenfolge prüfen</button>
+  </article>
+
+  <!-- TASK 5 -->
+  <article class="task-block task--locked" id="task-block-5" aria-labelledby="t5-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 5</span>
+      <h2 class="task__title" id="t5-title">Analyse: Die Botschaft des Experiments</h2>
+      <span class="task__difficulty">★★★</span>
+    </div>
+    <p class="task__question">Was soll Schüler:innen durch das Ende des Experiments klar werden? Wähle <strong>alle</strong> zutreffenden Aussagen und begründe deine Antwort.</p>
+
+    <ul class="ms-options" role="group">
+      <li class="ms-option"><input type="checkbox" id="ms5-0" value="0"><label for="ms5-0">Jede:r von uns kann Teil einer manipulativen Bewegung werden – auch ohne es zu merken</label></li>
+      <li class="ms-option"><input type="checkbox" id="ms5-1" value="1"><label for="ms5-1">Gruppenidentität kann die eigene Individualität und das kritische Denken verdrängen</label></li>
+      <li class="ms-option"><input type="checkbox" id="ms5-2" value="2"><label for="ms5-2">Aufklärung, historisches Wissen und kritisches Denken sind der einzige wirksame Schutz</label></li>
+      <li class="ms-option"><input type="checkbox" id="ms5-3" value="3"><label for="ms5-3">Der Nationalsozialismus war ein einmaliges Phänomen, das sich nie wiederholen kann</label></li>
+      <li class="ms-option"><input type="checkbox" id="ms5-4" value="4"><label for="ms5-4">Nur besonders schwache oder dumme Menschen fallen auf solche Experimente herein</label></li>
+    </ul>
+
+    <label for="ms5-text" style="font-size:0.85rem; color:var(--color-highlight); display:block; margin-top:0.5rem;">Persönliche Reflexion – was nimmst du aus dieser Geschichte mit?</label>
+    <textarea class="ms-textarea" id="ms5-text" placeholder="Was ist deine persönliche Lektion aus ‚Die Welle'? Was wirst du in deinem eigenen Leben anders machen oder beobachten? …" style="min-height:120px;"></textarea>
+
+    <div class="tip-section">
+      <button class="tip-request-btn" id="tip5-1" style="display:none;">★ Tipp 1</button>
+      <div class="tip-box tip-box-1" id="tip-box5-1">
+        <strong>Tipp 1:</strong> Erinnerst du dich an die erste Frage der Geschichte: „Warum haben die Deutschen mitgemacht?" – Bens Experiment gibt die Antwort. Was ist diese Antwort?
+      </div>
+      <button class="tip-request-btn" id="tip5-2" style="display:none; margin-top:0.4rem;">★★ Tipp 2</button>
+      <div class="tip-box tip-box-2" id="tip-box5-2">
+        <strong>Tipp 2:</strong> Die Schüler:innen in Bens Klasse waren normale, intelligente Menschen. Trotzdem sind sie mitgemacht. Das ist die eigentliche Botschaft: Es kann jeden treffen. Und nur wer das weiß, kann sich schützen.
+      </div>
+    </div>
+    <button class="btn btn--primary mt-2 ms-submit" id="ms5-submit">Auswahl prüfen</button>
+  </article>
+
+  <!-- Code Challenge -->
+  <section class="code-challenge hidden" id="code-challenge-section" aria-labelledby="code-title">
+    <h3 id="code-title">Das letzte Codewort</h3>
+    <div class="code-challenge__clue">
+      „Was haben die Mitglieder der Welle verloren – und was bekommen sie durch ihre Auflösung zurück? Die Welle hat ihnen ein Gefühl gegeben, doch sie hat etwas viel Kostbareres genommen: das Recht, selbst zu denken, zu zweifeln, Nein zu sagen. Das Gegenteil von Konformität und blindem Gehorsam heißt auf Deutsch …"
+    </div>
+    <div class="code-input-row">
+      <input type="text" class="code-input" placeholder="LETZTES CODEWORT" maxlength="20" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Letztes Codewort eingeben">
+      <button class="btn btn--danger code-submit">Codewort prüfen</button>
+    </div>
+    <div class="feedback code-feedback" style="margin-top:0.8rem;" role="alert" aria-live="polite"></div>
+  </section>
+
+  <!-- WAVE 7 COMPLETE -->
+  <div class="wave-complete-banner" id="wave-complete-banner" role="alert" aria-live="polite">
+    <h2>Welle 7 abgeschlossen!</h2>
+    <p>Die letzte Mappe liegt offen. Du hast das versiegelte Archiv vollständig durchgearbeitet.</p>
+    <div class="unlock-code-display"></div>
+    <p style="font-size:0.88rem; color:var(--color-highlight); margin-bottom:1rem;">Dieses Wort ist das kostbarste Gut – und das, was wir durch kritisches Denken schützen.</p>
+  </div>
+
+  <!-- FINAL COMPLETE PANEL -->
+  <div class="final-complete" id="final-complete-panel">
+    <h2>Das Archiv ist vollständig entschlüsselt.</h2>
+    <p style="color:var(--color-highlight); max-width:550px; margin:0 auto 1rem;">Du hast alle sieben Wellen durchlebt, alle Rätsel gelöst und die Geschichte der Welle von ihrem Beginn bis zu ihrem Ende verstanden.</p>
+    <div class="big-stamp">FREIHEIT</div>
+    <p style="color:var(--color-highlight); font-size:0.9rem; margin-top:1rem; max-width:520px; margin-left:auto; margin-right:auto;">
+      „Die Welle" zeigt uns, dass niemand immun ist gegen Manipulation, Gruppendenken und blinden Gehorsam. Das Einzige, was uns schützt, ist genau das: <strong>Wissen, Wachsamkeit und der Mut, selbst zu denken.</strong>
+    </p>
+    <p style="color:var(--color-success-light); font-family:var(--font-headline); font-size:0.85rem; text-transform:uppercase; letter-spacing:0.15em; margin-top:1.5rem;">„Stärke durch Disziplin · Stärke durch Gemeinschaft · Stärke durch Handeln" – und über allem: <strong>FREIHEIT</strong></p>
+    <div style="margin-top:1.5rem;">
+      <a href="../index.html" class="btn btn--primary">← Zurück zur Übersicht</a>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <div class="reflection-box">
+    <h3>Abschluss-Reflexion</h3>
+    <p style="color:var(--color-highlight); font-size:0.9rem; margin-bottom:0.6rem;">Am Anfang der Geschichte fragten Bens Schüler:innen: „Warum haben die Deutschen mitgemacht?" Jetzt weißt du die Antwort. Wie lautet sie – in deinen eigenen Worten?</p>
+    <textarea class="reflection-textarea" placeholder="Die Antwort auf die große Frage dieser Geschichte, in deinen eigenen Worten …" style="min-height:120px;"></textarea>
+  </div>
+
+  <nav class="nav-back">
+    <a href="welle6.html" class="btn btn--ghost">← Welle 6</a>
+    <a href="../index.html" class="btn btn--primary">Zur Übersicht →</a>
+  </nav>
+
+</div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container"><p>„Die Welle" Escape Game · Welle 7: Das Ende der Welle · Jahrgang 9, E-Kurs</p></div>
+</footer>
+
+<script src="../js/sound.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/aufgaben.js"></script>
+<script>
+  const WAVE_N = 7;
+
+  document.querySelectorAll('.collapsible__trigger').forEach(t => {
+    t.addEventListener('click', () => {
+      const open = t.getAttribute('aria-expanded') === 'true';
+      t.setAttribute('aria-expanded', !open);
+      t.nextElementSibling.classList.toggle('open', !open);
+    });
+  });
+
+  if (!DW.isWaveUnlocked(WAVE_N)) window.location.href = '../index.html';
+
+  Aufgaben.initWavePage(WAVE_N);
+  Aufgaben.initMC(WAVE_N, 1, 1);
+  Aufgaben.initTF(WAVE_N, 2, ['f','r','r','r']);
+  Aufgaben.initAssignment(WAVE_N, 3, []);
+  Aufgaben.initSorting(WAVE_N, 4, ['A','B','C','D']);
+  Aufgaben.initMS(WAVE_N, 5, [0,1,2], true);
+
+  (function() {
+    const t1 = document.querySelector('#tip5-1'), b1 = document.querySelector('#tip-box5-1');
+    const t2 = document.querySelector('#tip5-2'), b2 = document.querySelector('#tip-box5-2');
+    if (t1) { setTimeout(() => t1.style.display='inline-block', 60000); t1.addEventListener('click', () => { b1.classList.add('show'); t1.style.display='none'; }); }
+    if (t2) { setTimeout(() => t2.style.display='inline-block', 120000); t2.addEventListener('click', () => { b2.classList.add('show'); t2.style.display='none'; }); }
+  })();
+
+  // Override code challenge to also show final panel on wave 7
+  Aufgaben.initCodeChallenge(WAVE_N, 'FREIHEIT');
+
+  // After wave 7 is done, show final panel
+  (function checkFinalDone() {
+    if (DW.isWaveDone(7)) {
+      document.getElementById('final-complete-panel').classList.add('show');
+    }
+  })();
+
+  // Monitor for wave completion on this page
+  const origMark = DW.markWaveDone;
+  // Patch to show final panel after wave 7 done
+  const origComplete = Aufgaben.initCodeChallenge;
+  // Listen for wave-complete-banner becoming visible
+  const observer = new MutationObserver(() => {
+    const banner = document.getElementById('wave-complete-banner');
+    if (banner && banner.classList.contains('show')) {
+      setTimeout(() => {
+        document.getElementById('final-complete-panel').classList.add('show');
+        document.getElementById('final-complete-panel').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 2000);
+    }
+  });
+  const banner = document.getElementById('wave-complete-banner');
+  if (banner) observer.observe(banner, { attributes: true, attributeFilter: ['class'] });
+</script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welle 1 – Der Funke | Die Welle Escape Game</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<!-- SITE HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="../index.html" class="site-title">
+      <span>Die</span> Welle
+      <span class="site-title__sub" style="font-size:0.55em; display:block; letter-spacing:0.1em; color:var(--color-highlight); font-family:Georgia,serif; font-weight:normal; text-transform:none;">Welle 1 von 7</span>
+    </a>
+    <div class="header-controls">
+      <button class="btn btn--sound" id="sound-toggle" title="Sound umschalten" aria-label="Sound umschalten">🔊</button>
+      <a href="../index.html" class="btn btn--ghost" style="font-size:0.75rem;">← Übersicht</a>
+    </div>
+  </div>
+</header>
+
+<!-- WAVE HEADER -->
+<div class="wave-header">
+  <div class="container--narrow">
+    <p class="wave-header__meta">Welle 1 · ★☆☆ bis ★★★</p>
+    <h1 class="wave-header__title">Der Funke</h1>
+    <p class="wave-header__subtitle">Kontext: Das Dritte Reich, die Warum-Frage, Bens Unterrichtsexperiment beginnt.</p>
+  </div>
+</div>
+
+<main>
+<div class="container--narrow" style="padding-top:1.5rem; padding-bottom:3rem;">
+
+  <!-- Learning Objectives -->
+  <div class="collapsible" id="lernziele">
+    <button class="collapsible__trigger" aria-expanded="false" aria-controls="lernziele-body">
+      Lernziele dieser Welle
+      <span class="collapsible__arrow" aria-hidden="true">▼</span>
+    </button>
+    <div class="collapsible__body" id="lernziele-body">
+      <ul style="list-style:disc; padding-left:1.2rem; color:var(--color-highlight); font-size:0.92rem; line-height:1.8;">
+        <li>Den historischen Kontext von Massengehorsam verstehen</li>
+        <li>Blinde Autorität kritisch hinterfragen</li>
+        <li>Bedingungen erkennen, die Konformität ermöglichen</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Narrative Context -->
+  <div class="context-box" role="region" aria-label="Kontext der Welle">
+    <p>Es ist ein gewöhnlicher Dienstag im April 1969. In Herrn Rossis Geschichtskurs läuft gerade ein Dokumentarfilm über den Holocaust. Die Bilder sind erschütternd. Danach herrscht Stille.</p>
+    <p>„Wie konnte das passieren?", fragt ein Schüler. „Warum haben die Deutschen einfach mitgemacht?" Niemand hat eine Antwort – und genau das lässt Herrn Rossi nicht los. Sein Experiment beginnt heute.</p>
+  </div>
+
+  <!-- ===== TASK 1 – MC ===== -->
+  <article class="task-block" id="task-block-1" aria-labelledby="task1-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 1</span>
+      <h2 class="task__title" id="task1-title">Verstehen &amp; Einordnen</h2>
+      <span class="task__difficulty">★☆☆</span>
+    </div>
+    <p class="task__question">Warum können Bens Schüler:innen zunächst nicht verstehen, wie die Deutschen zum Holocaust schweigen konnten?</p>
+
+    <ul class="mc-options" role="radiogroup" aria-labelledby="task1-title">
+      <li class="mc-option">
+        <input type="radio" name="mc1" id="mc1-a" value="0">
+        <label for="mc1-a">a) Sie interessieren sich nicht für Geschichte und langweilen sich im Unterricht.</label>
+      </li>
+      <li class="mc-option">
+        <input type="radio" name="mc1" id="mc1-b" value="1">
+        <label for="mc1-b">b) Sie glauben, sie wären in so einer Situation ganz anders gehandelt – sie hätten sich gewehrt.</label>
+      </li>
+      <li class="mc-option">
+        <input type="radio" name="mc1" id="mc1-c" value="2">
+        <label for="mc1-c">c) Sie kennen keine historischen Fakten über den Zweiten Weltkrieg.</label>
+      </li>
+      <li class="mc-option">
+        <input type="radio" name="mc1" id="mc1-d" value="3">
+        <label for="mc1-d">d) Sie verstehen die Frage ihres Lehrers nicht richtig.</label>
+      </li>
+    </ul>
+
+    <button class="btn btn--primary mt-2 mc-submit" id="mc1-submit">Antwort prüfen</button>
+  </article>
+
+  <!-- ===== TASK 2 – True/False ===== -->
+  <article class="task-block task--locked" id="task-block-2" aria-labelledby="task2-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 2</span>
+      <h2 class="task__title" id="task2-title">Richtig oder Falsch?</h2>
+      <span class="task__difficulty">★☆☆</span>
+    </div>
+    <p class="task__question">Beurteile die folgenden Aussagen über die erste Stunde des Experiments als richtig oder falsch.</p>
+
+    <table class="tf-table" role="table" aria-label="Richtig-Falsch-Aufgabe">
+      <thead>
+        <tr>
+          <th scope="col">Aussage</th>
+          <th scope="col">Deine Antwort</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="tf-row" data-index="0">
+          <td>Ben Ross zeigt im Unterricht einen Dokumentarfilm über den Holocaust.</td>
+          <td>
+            <div class="tf-buttons">
+              <button class="tf-btn" data-val="r" aria-label="Richtig">Richtig</button>
+              <button class="tf-btn" data-val="f" aria-label="Falsch">Falsch</button>
+            </div>
+          </td>
+        </tr>
+        <tr class="tf-row" data-index="1">
+          <td>Alle Schüler:innen sind sofort begeistert von dem Experiment und machen ohne Zögern mit.</td>
+          <td>
+            <div class="tf-buttons">
+              <button class="tf-btn" data-val="r" aria-label="Richtig">Richtig</button>
+              <button class="tf-btn" data-val="f" aria-label="Falsch">Falsch</button>
+            </div>
+          </td>
+        </tr>
+        <tr class="tf-row" data-index="2">
+          <td>Laurie Saunders ist von Anfang an skeptisch gegenüber der Welle.</td>
+          <td>
+            <div class="tf-buttons">
+              <button class="tf-btn" data-val="r" aria-label="Richtig">Richtig</button>
+              <button class="tf-btn" data-val="f" aria-label="Falsch">Falsch</button>
+            </div>
+          </td>
+        </tr>
+        <tr class="tf-row" data-index="3">
+          <td>Ben Ross hat das Experiment von langer Hand geplant, bevor er es durchführt.</td>
+          <td>
+            <div class="tf-buttons">
+              <button class="tf-btn" data-val="r" aria-label="Richtig">Richtig</button>
+              <button class="tf-btn" data-val="f" aria-label="Falsch">Falsch</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <button class="btn btn--primary mt-2 tf-submit" id="tf2-submit">Antworten prüfen</button>
+  </article>
+
+  <!-- ===== TASK 3 – Assignment ===== -->
+  <article class="task-block task--locked" id="task-block-3" aria-labelledby="task3-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 3</span>
+      <h2 class="task__title" id="task3-title">Figuren zuordnen</h2>
+      <span class="task__difficulty">★★☆</span>
+    </div>
+    <p class="task__question">Ziehe die Beschreibungen (rechte Spalte) zu den richtigen Figuren (linke Spalte). Auf Touch-Geräten: Tippe eine Karte an und dann das Zielfeld.</p>
+
+    <div class="assignment-area">
+      <div class="assignment-source">
+        <h4>Beschreibungen (ziehe mich)</h4>
+        <div class="dnd-source-pool" id="assign3-source">
+          <div class="dnd-item" draggable="true" data-value="Geschichtslehrer" id="ai-1">Geschichtslehrer</div>
+          <div class="dnd-item" draggable="true" data-value="Schülerin und Kritikerin" id="ai-2">Schülerin und Kritikerin</div>
+          <div class="dnd-item" draggable="true" data-value="Außenseiter der Klasse" id="ai-3">Außenseiter der Klasse</div>
+          <div class="dnd-item" draggable="true" data-value="Lauries Freund" id="ai-4">Lauries Freund</div>
+        </div>
+      </div>
+      <div class="assignment-targets">
+        <h4>Figuren (Zielfelder)</h4>
+        <div class="assign-target-row">
+          <div class="assign-label">Ben Ross</div>
+          <div class="assign-drop" data-expected="Geschichtslehrer" aria-label="Zielfeld für Ben Ross"></div>
+        </div>
+        <div class="assign-target-row">
+          <div class="assign-label">Laurie Saunders</div>
+          <div class="assign-drop" data-expected="Schülerin und Kritikerin" aria-label="Zielfeld für Laurie"></div>
+        </div>
+        <div class="assign-target-row">
+          <div class="assign-label">Robert Billings</div>
+          <div class="assign-drop" data-expected="Außenseiter der Klasse" aria-label="Zielfeld für Robert"></div>
+        </div>
+        <div class="assign-target-row">
+          <div class="assign-label">David Collins</div>
+          <div class="assign-drop" data-expected="Lauries Freund" aria-label="Zielfeld für David"></div>
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn--primary mt-2 assign-submit" id="assign3-submit">Zuordnung prüfen</button>
+  </article>
+
+  <!-- ===== TASK 4 – Sorting ===== -->
+  <article class="task-block task--locked" id="task-block-4" aria-labelledby="task4-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 4</span>
+      <h2 class="task__title" id="task4-title">Chronologisch sortieren</h2>
+      <span class="task__difficulty">★★☆</span>
+    </div>
+    <p class="task__question">Bringe die folgenden Ereignisse in die richtige zeitliche Reihenfolge. Ziehe die Karten in die richtige Position.</p>
+
+    <ul class="sort-list" id="sort4-list" aria-label="Sortierbare Ereignisliste">
+      <li class="sort-item" data-value="A" draggable="true">
+        <span class="sort-num">1</span>
+        <span>Ben entscheidet sich spontan für ein Unterrichtsexperiment</span>
+      </li>
+      <li class="sort-item" data-value="B" draggable="true">
+        <span class="sort-num">2</span>
+        <span>Schüler:innen fragen, warum die Deutschen beim Holocaust mitgemacht haben</span>
+      </li>
+      <li class="sort-item" data-value="C" draggable="true">
+        <span class="sort-num">3</span>
+        <span>Ben zeigt einen Dokumentarfilm über den Holocaust</span>
+      </li>
+      <li class="sort-item" data-value="D" draggable="true">
+        <span class="sort-num">4</span>
+        <span>Ben formuliert die ersten Regeln: Aufrechte Haltung, direkte Antworten</span>
+      </li>
+    </ul>
+
+    <button class="btn btn--primary mt-2 sort-submit" id="sort4-submit">Reihenfolge prüfen</button>
+  </article>
+
+  <!-- ===== TASK 5 – Multiple Selection ===== -->
+  <article class="task-block task--locked" id="task-block-5" aria-labelledby="task5-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 5</span>
+      <h2 class="task__title" id="task5-title">Analyse: Das erste Experiment</h2>
+      <span class="task__difficulty">★★★</span>
+    </div>
+    <p class="task__question">Welche Merkmale gehören zu Bens erstem Unterrichtsexperiment? Wähle <strong>alle</strong> zutreffenden Antworten aus und begründe deine Auswahl kurz.</p>
+
+    <ul class="ms-options" role="group" aria-labelledby="task5-title">
+      <li class="ms-option">
+        <input type="checkbox" id="ms5-0" value="0">
+        <label for="ms5-0">Klare Sitzordnung und aufrechte Körperhaltung werden eingefordert</label>
+      </li>
+      <li class="ms-option">
+        <input type="checkbox" id="ms5-1" value="1">
+        <label for="ms5-1">Direkte, präzise Antworten auf Fragen des Lehrers</label>
+      </li>
+      <li class="ms-option">
+        <input type="checkbox" id="ms5-2" value="2">
+        <label for="ms5-2">Schweigen, wenn man nicht aufgerufen wurde</label>
+      </li>
+      <li class="ms-option">
+        <input type="checkbox" id="ms5-3" value="3">
+        <label for="ms5-3">Aufstehen beim Sprechen</label>
+      </li>
+      <li class="ms-option">
+        <input type="checkbox" id="ms5-4" value="4">
+        <label for="ms5-4">Geheimes Erkennungszeichen für Mitglieder</label>
+      </li>
+      <li class="ms-option">
+        <input type="checkbox" id="ms5-5" value="5">
+        <label for="ms5-5">Mitgliedsausweise zur Unterscheidung von Mitgliedern und Nicht-Mitgliedern</label>
+      </li>
+    </ul>
+
+    <label for="ms5-text" style="font-size:0.85rem; color:var(--color-highlight); display:block; margin-top:0.5rem;">Begründung (mindestens ein Satz):</label>
+    <textarea class="ms-textarea" id="ms5-text" placeholder="Erkläre kurz, warum du diese Elemente ausgewählt hast …" aria-label="Begründung für deine Auswahl"></textarea>
+
+    <!-- Tip System -->
+    <div class="tip-section">
+      <button class="tip-request-btn" id="tip5-1" style="display:none;" aria-label="Ersten Tipp anzeigen">★ Tipp 1 anzeigen</button>
+      <div class="tip-box tip-box-1" id="tip-box5-1">
+        <strong>Tipp 1:</strong> Überlege, was Ben in der <em>ersten</em> Unterrichtsstunde einführt – bevor die Welle einen Namen hat. Was macht er mit der Sitzordnung?
+      </div>
+      <button class="tip-request-btn" id="tip5-2" style="display:none; margin-top:0.4rem;" aria-label="Zweiten Tipp anzeigen">★★ Tipp 2 anzeigen</button>
+      <div class="tip-box tip-box-2" id="tip-box5-2">
+        <strong>Tipp 2:</strong> Das geheime Erkennungszeichen und die Mitgliedsausweise kommen erst später in der Geschichte – sie gehören nicht zu dieser ersten Unterrichtsstunde.
+      </div>
+    </div>
+
+    <button class="btn btn--primary mt-2 ms-submit" id="ms5-submit">Auswahl prüfen</button>
+  </article>
+
+  <!-- ===== CODE CHALLENGE ===== -->
+  <section class="code-challenge hidden" id="code-challenge-section" aria-labelledby="code-title">
+    <h3 id="code-title">Codewort-Rätsel</h3>
+    <div class="code-challenge__clue">
+      „Das Wort, das diese erste Welle beschreibt, steckt bereits im Kern des Experiments: Man folgt Anweisungen, ohne sie zu hinterfragen. Schüler:innen sitzen aufrecht, sprechen erst wenn sie aufgerufen werden, folgen allen Anweisungen – ohne Widerspruch. Wie nennt man dieses Verhalten gegenüber einer Autorität?"
+    </div>
+    <div class="code-input-row">
+      <input type="text" class="code-input" placeholder="CODEWORT EINGEBEN" maxlength="20" autocomplete="off" autocorrect="off" autocapitalize="characters" spellcheck="false" aria-label="Codewort eingeben">
+      <button class="btn btn--danger code-submit" aria-label="Codewort prüfen">Codewort prüfen</button>
+    </div>
+    <div class="feedback code-feedback" style="margin-top:0.8rem;" role="alert" aria-live="polite"></div>
+  </section>
+
+  <!-- Wave Complete Banner -->
+  <div class="wave-complete-banner" id="wave-complete-banner" role="alert" aria-live="polite">
+    <h2>Welle 1 abgeschlossen!</h2>
+    <p>Du hast das Codewort gefunden. Das Archiv öffnet sich weiter …</p>
+    <div class="unlock-code-display" aria-label="Codewort"></div>
+    <p style="font-size:0.88rem; color:var(--color-highlight); margin-bottom:1rem;">Notiere dieses Wort – es beschreibt das Kernthema dieser Welle und öffnet Welle 2.</p>
+    <a href="welle2.html" class="btn btn--primary next-wave-btn hidden">Weiter zu Welle 2 →</a>
+    <a href="../index.html" class="btn btn--ghost" style="margin-left:0.5rem;">← Zurück zur Übersicht</a>
+  </div>
+
+  <!-- Reflection -->
+  <div class="reflection-box">
+    <h3>Reflexion</h3>
+    <p style="color:var(--color-highlight); font-size:0.9rem; margin-bottom:0.6rem;">Hättest du in Bens Klasse mitgemacht? Was hätte dich dazu verleitet – oder was hätte dich gezögert? (Keine Bewertung – deine ehrliche Antwort für dich selbst.)</p>
+    <textarea class="reflection-textarea" placeholder="Deine Gedanken …" aria-label="Persönliche Reflexion"></textarea>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav-back" aria-label="Navigation">
+    <a href="../index.html" class="btn btn--ghost">← Zurück zur Übersicht</a>
+    <a href="welle2.html" class="btn btn--ghost" id="nav-next-wave">Weiter zu Welle 2 →</a>
+  </nav>
+
+</div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p>„Die Welle" Escape Game · Welle 1: Der Funke</p>
+  </div>
+</footer>
+
+<script src="../js/sound.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/aufgaben.js"></script>
+<script>
+  const WAVE_N = 1;
+
+  // Collapsibles
+  document.querySelectorAll('.collapsible__trigger').forEach(t => {
+    t.addEventListener('click', () => {
+      const open = t.getAttribute('aria-expanded') === 'true';
+      t.setAttribute('aria-expanded', !open);
+      t.nextElementSibling.classList.toggle('open', !open);
+    });
+  });
+
+  // Check access
+  if (!DW.isWaveUnlocked(WAVE_N)) {
+    window.location.href = '../index.html';
+  }
+
+  // Init page
+  Aufgaben.initWavePage(WAVE_N);
+
+  // Task 1: MC – correct answer index 1 (b)
+  document.getElementById('mc1-submit').addEventListener('click', () => {});
+  Aufgaben.initMC(WAVE_N, 1, 1);
+
+  // Task 2: TF – r, f, r, f
+  Aufgaben.initTF(WAVE_N, 2, ['r','f','r','f']);
+
+  // Task 3: Assignment
+  Aufgaben.initAssignment(WAVE_N, 3, []);
+
+  // Task 4: Sorting – correct order by data-value
+  Aufgaben.initSorting(WAVE_N, 4, ['C','B','A','D']);
+
+  // Task 5: Multiple Selection – correct indices 0,1,2,3 (NOT 4,5)
+  Aufgaben.initMS(WAVE_N, 5, [0,1,2,3], true);
+
+  // Connect tip buttons
+  (function() {
+    const block = document.getElementById('task-block-5');
+    if (!block) return;
+    const t1 = block.querySelector('#tip5-1');
+    const t2 = block.querySelector('#tip5-2');
+    const b1 = block.querySelector('#tip-box5-1');
+    const b2 = block.querySelector('#tip-box5-2');
+    if (t1 && b1) {
+      setTimeout(() => { t1.style.display = 'inline-block'; SoundManager.playTip && SoundManager.playTip(); }, 60000);
+      t1.addEventListener('click', () => { b1.classList.add('show'); t1.style.display='none'; });
+    }
+    if (t2 && b2) {
+      setTimeout(() => { t2.style.display = 'inline-block'; SoundManager.playTip && SoundManager.playTip(); }, 120000);
+      t2.addEventListener('click', () => { b2.classList.add('show'); t2.style.display='none'; });
+    }
+  })();
+
+  // Code challenge
+  Aufgaben.initCodeChallenge(WAVE_N, 'GEHORSAM');
+</script>
+</body>
+</html>

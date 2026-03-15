@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welle 5 – Die Andersdenkenden | Die Welle Escape Game</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="../index.html" class="site-title">
+      <span>Die</span> Welle
+      <span class="site-title__sub" style="font-size:0.55em; display:block; letter-spacing:0.1em; color:var(--color-highlight); font-family:Georgia,serif; font-weight:normal; text-transform:none;">Welle 5 von 7</span>
+    </a>
+    <div class="header-controls">
+      <button class="btn btn--sound" id="sound-toggle" aria-label="Sound umschalten">🔊</button>
+      <a href="../index.html" class="btn btn--ghost" style="font-size:0.75rem;">← Übersicht</a>
+    </div>
+  </div>
+</header>
+
+<div class="wave-header">
+  <div class="container--narrow">
+    <p class="wave-header__meta">Welle 5 · ★☆☆ bis ★★★</p>
+    <h1 class="wave-header__title">Die Andersdenkenden</h1>
+    <p class="wave-header__subtitle">Laurie, David, Amy – Widerstand und seine persönlichen Kosten.</p>
+  </div>
+</div>
+
+<main>
+<div class="container--narrow" style="padding-top:1.5rem; padding-bottom:3rem;">
+
+  <div class="collapsible">
+    <button class="collapsible__trigger" aria-expanded="false">
+      Lernziele dieser Welle
+      <span class="collapsible__arrow" aria-hidden="true">▼</span>
+    </button>
+    <div class="collapsible__body">
+      <ul style="list-style:disc; padding-left:1.2rem; color:var(--color-highlight); font-size:0.92rem; line-height:1.8;">
+        <li>Zivilcourage als aktive Haltung gegen Gruppenkonformität verstehen</li>
+        <li>Die psychologischen Kosten von Widerstand gegen eine Mehrheit erkennen</li>
+        <li>Davids Zerrissenheit als Modell für Mitläufertum analysieren</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="context-box">
+    <p>Laurie und David geraten in einen heftigen Streit. Er will, dass sie aufhört, die Welle zu kritisieren. Sie weigert sich. In einem Moment der Wut schubst David sie – und erschrickt sofort über sich selbst.</p>
+    <p>Lauries Eltern sind besorgt. Ehemalige Wellenmitglieder beginnen zu zweifeln. Doch die Welle zieht immer weitere Kreise. Laurie und David beschließen gemeinsam: Die Welle muss gestoppt werden.</p>
+  </div>
+
+  <!-- TASK 1 -->
+  <article class="task-block" id="task-block-1" aria-labelledby="t1-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 1</span>
+      <h2 class="task__title" id="t1-title">Der Konflikt zwischen Laurie und David</h2>
+      <span class="task__difficulty">★☆☆</span>
+    </div>
+    <p class="task__question">Warum geraten Laurie und David in einen ernsthaften Streit?</p>
+
+    <ul class="mc-options" role="radiogroup">
+      <li class="mc-option"><input type="radio" name="mc1" id="mc1-a" value="0"><label for="mc1-a">a) David ist eifersüchtig, weil Laurie mehr Zeit mit anderen verbringt</label></li>
+      <li class="mc-option"><input type="radio" name="mc1" id="mc1-b" value="1"><label for="mc1-b">b) David will, dass Laurie aufhört, die Welle öffentlich zu kritisieren – Laurie sieht die Gefahr, David glaubt noch an die Welle</label></li>
+      <li class="mc-option"><input type="radio" name="mc1" id="mc1-c" value="2"><label for="mc1-c">c) Laurie ist neidisch auf Davids Erfolge als Wellenführer</label></li>
+      <li class="mc-option"><input type="radio" name="mc1" id="mc1-d" value="3"><label for="mc1-d">d) David findet, dass Laurie zu viel Zeit mit dem Schreiben verbringt statt mit ihm</label></li>
+    </ul>
+    <button class="btn btn--primary mt-2 mc-submit" id="mc1-submit">Antwort prüfen</button>
+  </article>
+
+  <!-- TASK 2 -->
+  <article class="task-block task--locked" id="task-block-2" aria-labelledby="t2-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 2</span>
+      <h2 class="task__title" id="t2-title">Richtig oder Falsch?</h2>
+      <span class="task__difficulty">★☆☆</span>
+    </div>
+    <p class="task__question">Beurteile die Aussagen über die Ereignisse in Welle 5.</p>
+
+    <table class="tf-table" role="table">
+      <thead><tr><th scope="col">Aussage</th><th scope="col">Antwort</th></tr></thead>
+      <tbody>
+        <tr class="tf-row">
+          <td>Lauries Eltern machen sich Sorgen und unterstützen ihr kritisches Engagement gegen die Welle.</td>
+          <td><div class="tf-buttons"><button class="tf-btn" data-val="r">Richtig</button><button class="tf-btn" data-val="f">Falsch</button></div></td>
+        </tr>
+        <tr class="tf-row">
+          <td>David schubst Laurie in einem Moment des Streits körperlich.</td>
+          <td><div class="tf-buttons"><button class="tf-btn" data-val="r">Richtig</button><button class="tf-btn" data-val="f">Falsch</button></div></td>
+        </tr>
+        <tr class="tf-row">
+          <td>David bereut sein Verhalten unmittelbar danach und ist bestürzt über sich selbst.</td>
+          <td><div class="tf-buttons"><button class="tf-btn" data-val="r">Richtig</button><button class="tf-btn" data-val="f">Falsch</button></div></td>
+        </tr>
+        <tr class="tf-row">
+          <td>Laurie gibt nach dem Streit mit David auf und beendet ihren Widerstand gegen die Welle.</td>
+          <td><div class="tf-buttons"><button class="tf-btn" data-val="r">Richtig</button><button class="tf-btn" data-val="f">Falsch</button></div></td>
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn--primary mt-2 tf-submit" id="tf2-submit">Antworten prüfen</button>
+  </article>
+
+  <!-- TASK 3 -->
+  <article class="task-block task--locked" id="task-block-3" aria-labelledby="t3-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 3</span>
+      <h2 class="task__title" id="t3-title">Figuren und Rollen zuordnen</h2>
+      <span class="task__difficulty">★★☆</span>
+    </div>
+    <p class="task__question">Ordne den Figuren ihre Rolle in diesem Abschnitt zu.</p>
+
+    <div class="assignment-area">
+      <div class="assignment-source">
+        <h4>Beschreibungen</h4>
+        <div id="assign3-source">
+          <div class="dnd-item" draggable="true" data-value="Hauptkritikerin der Welle">Hauptkritikerin der Welle</div>
+          <div class="dnd-item" draggable="true" data-value="Besorgte Unterstützer">Besorgte Unterstützer</div>
+          <div class="dnd-item" draggable="true" data-value="Zerrissen zwischen Welle und Laurie">Zerrissen zwischen Welle und Laurie</div>
+          <div class="dnd-item" draggable="true" data-value="Beginnen zu zweifeln">Beginnen zu zweifeln</div>
+        </div>
+      </div>
+      <div class="assignment-targets">
+        <h4>Zielfelder</h4>
+        <div class="assign-target-row">
+          <div class="assign-label">Laurie Saunders</div>
+          <div class="assign-drop" data-expected="Hauptkritikerin der Welle"></div>
+        </div>
+        <div class="assign-target-row">
+          <div class="assign-label">Lauries Eltern</div>
+          <div class="assign-drop" data-expected="Besorgte Unterstützer"></div>
+        </div>
+        <div class="assign-target-row">
+          <div class="assign-label">David Collins</div>
+          <div class="assign-drop" data-expected="Zerrissen zwischen Welle und Laurie"></div>
+        </div>
+        <div class="assign-target-row">
+          <div class="assign-label">Ehemalige Mitglieder</div>
+          <div class="assign-drop" data-expected="Beginnen zu zweifeln"></div>
+        </div>
+      </div>
+    </div>
+    <button class="btn btn--primary mt-2 assign-submit" id="assign3-submit">Zuordnung prüfen</button>
+  </article>
+
+  <!-- TASK 4 -->
+  <article class="task-block task--locked" id="task-block-4" aria-labelledby="t4-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 4</span>
+      <h2 class="task__title" id="t4-title">Ereignisse sortieren</h2>
+      <span class="task__difficulty">★★☆</span>
+    </div>
+    <p class="task__question">Bringe die Ereignisse in die richtige Reihenfolge.</p>
+
+    <ul class="sort-list" id="sort4-list">
+      <li class="sort-item" data-value="C" draggable="true"><span class="sort-num">1</span><span>David bereut seine Tat sofort und ist erschüttert über sein eigenes Verhalten</span></li>
+      <li class="sort-item" data-value="A" draggable="true"><span class="sort-num">2</span><span>Laurie und David streiten heftig über die Welle und Lauries Kritik daran</span></li>
+      <li class="sort-item" data-value="D" draggable="true"><span class="sort-num">3</span><span>Gemeinsam beschließen Laurie und David, die Welle zu stoppen</span></li>
+      <li class="sort-item" data-value="B" draggable="true"><span class="sort-num">4</span><span>David schubst Laurie in einem unkontrollierten Moment</span></li>
+    </ul>
+    <button class="btn btn--primary mt-2 sort-submit" id="sort4-submit">Reihenfolge prüfen</button>
+  </article>
+
+  <!-- TASK 5 -->
+  <article class="task-block task--locked" id="task-block-5" aria-labelledby="t5-title">
+    <div class="task__header">
+      <span class="task__number">Aufgabe 5</span>
+      <h2 class="task__title" id="t5-title">Analyse: Davids Verhalten und Gruppeneinfluss</h2>
+      <span class="task__difficulty">★★★</span>
+    </div>
+    <p class="task__question">Was zeigt Davids körperliche Reaktion gegenüber Laurie über den psychologischen Einfluss der Welle? Wähle <strong>alle</strong> zutreffenden Aussagen.</p>
+
+    <ul class="ms-options" role="group">
+      <li class="ms-option"><input type="checkbox" id="ms5-0" value="0"><label for="ms5-0">Die Welle hat Davids Charakter und sein Verhalten gegenüber anderen grundlegend verändert</label></li>
+      <li class="ms-option"><input type="checkbox" id="ms5-1" value="1"><label for="ms5-1">Gruppendenken kann enge Freundschaften zersetzen und zerstören</label></li>
+      <li class="ms-option"><input type="checkbox" id="ms5-2" value="2"><label for="ms5-2">Manipulation und Indoktrination können zu Gewalt gegen nahestehende Menschen führen</label></li>
+      <li class="ms-option"><input type="checkbox" id="ms5-3" value="3"><label for="ms5-3">David ist von Natur aus ein aggressiver Mensch – die Welle hat damit nichts zu tun</label></li>
+      <li class="ms-option"><input type="checkbox" id="ms5-4" value="4"><label for="ms5-4">Wer Mitglied einer Gruppe ist, kann sich immer frei von deren Einfluss entscheiden</label></li>
+    </ul>
+
+    <label for="ms5-text" style="font-size:0.85rem; color:var(--color-highlight); display:block; margin-top:0.5rem;">Begründung:</label>
+    <textarea class="ms-textarea" id="ms5-text" placeholder="Was sagt dieser Moment über die Macht des Gruppendrucks? Erkläre Davids Situation …"></textarea>
+
+    <div class="tip-section">
+      <button class="tip-request-btn" id="tip5-1" style="display:none;">★ Tipp 1</button>
+      <div class="tip-box tip-box-1" id="tip-box5-1">
+        <strong>Tipp 1:</strong> David ist kein schlechter Mensch – aber er ist ein Mensch, der unter starkem Gruppeneinfluss steht. Was passiert, wenn eine Gruppe beginnt, unsere Werte zu überschreiben?
+      </div>
+      <button class="tip-request-btn" id="tip5-2" style="display:none; margin-top:0.4rem;">★★ Tipp 2</button>
+      <div class="tip-box tip-box-2" id="tip-box5-2">
+        <strong>Tipp 2:</strong> Davids sofortige Reue zeigt, dass er noch er selbst ist – aber die Welle hat ihn trotzdem dazu gebracht, jemanden zu verletzen, den er liebt. Das ist der eigentliche Schrecken der Geschichte.
+      </div>
+    </div>
+    <button class="btn btn--primary mt-2 ms-submit" id="ms5-submit">Auswahl prüfen</button>
+  </article>
+
+  <!-- Code Challenge -->
+  <section class="code-challenge hidden" id="code-challenge-section" aria-labelledby="code-title">
+    <h3 id="code-title">Codewort-Rätsel</h3>
+    <div class="code-challenge__clue">
+      „Laurie und David stellen sich gegen den Strom. Sie sagen Nein, wenn alle anderen Ja sagen. Sie riskieren ihre Freundschaften, ihre Beliebtheit, ihre Sicherheit. Was üben sie in diesem Kapitel – das genaue Gegenteil von blindem Gehorsam? Das ist das Codewort dieser Mappe."
+    </div>
+    <div class="code-input-row">
+      <input type="text" class="code-input" placeholder="CODEWORT EINGEBEN" maxlength="20" autocomplete="off" autocapitalize="characters" spellcheck="false" aria-label="Codewort eingeben">
+      <button class="btn btn--danger code-submit">Codewort prüfen</button>
+    </div>
+    <div class="feedback code-feedback" style="margin-top:0.8rem;" role="alert" aria-live="polite"></div>
+  </section>
+
+  <div class="wave-complete-banner" id="wave-complete-banner" role="alert" aria-live="polite">
+    <h2>Welle 5 abgeschlossen!</h2>
+    <p>Die fünfte Mappe liegt offen vor dir. Noch zwei Mappen und die Wahrheit ist vollständig …</p>
+    <div class="unlock-code-display"></div>
+    <p style="font-size:0.88rem; color:var(--color-highlight); margin-bottom:1rem;">Das Codewort ist das, was Laurie und David brauchen – und was blinden Gehorsam überwindet.</p>
+    <a href="welle6.html" class="btn btn--primary next-wave-btn hidden">Weiter zu Welle 6 →</a>
+    <a href="../index.html" class="btn btn--ghost" style="margin-left:0.5rem;">← Übersicht</a>
+  </div>
+
+  <div class="reflection-box">
+    <h3>Reflexion</h3>
+    <p style="color:var(--color-highlight); font-size:0.9rem; margin-bottom:0.6rem;">David tut seiner Freundin gegenüber etwas, das er im Nachhinein tief bereut. Kann jemand wirklich für eine Handlung verantwortlich gemacht werden, die durch Gruppenmanipulation ausgelöst wurde? Was denkst du?</p>
+    <textarea class="reflection-textarea" placeholder="Deine Gedanken …"></textarea>
+  </div>
+
+  <nav class="nav-back">
+    <a href="welle4.html" class="btn btn--ghost">← Welle 4</a>
+    <a href="../index.html" class="btn btn--ghost">Übersicht</a>
+    <a href="welle6.html" class="btn btn--ghost">Welle 6 →</a>
+  </nav>
+
+</div>
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="container"><p>„Die Welle" Escape Game · Welle 5: Die Andersdenkenden</p></div>
+</footer>
+
+<script src="../js/sound.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/aufgaben.js"></script>
+<script>
+  const WAVE_N = 5;
+
+  document.querySelectorAll('.collapsible__trigger').forEach(t => {
+    t.addEventListener('click', () => {
+      const open = t.getAttribute('aria-expanded') === 'true';
+      t.setAttribute('aria-expanded', !open);
+      t.nextElementSibling.classList.toggle('open', !open);
+    });
+  });
+
+  if (!DW.isWaveUnlocked(WAVE_N)) window.location.href = '../index.html';
+
+  Aufgaben.initWavePage(WAVE_N);
+  Aufgaben.initMC(WAVE_N, 1, 1);
+  Aufgaben.initTF(WAVE_N, 2, ['r','r','r','f']);
+  Aufgaben.initAssignment(WAVE_N, 3, []);
+  Aufgaben.initSorting(WAVE_N, 4, ['A','B','C','D']);
+  Aufgaben.initMS(WAVE_N, 5, [0,1,2], true);
+
+  (function() {
+    const t1 = document.querySelector('#tip5-1'), b1 = document.querySelector('#tip-box5-1');
+    const t2 = document.querySelector('#tip5-2'), b2 = document.querySelector('#tip-box5-2');
+    if (t1) { setTimeout(() => t1.style.display='inline-block', 60000); t1.addEventListener('click', () => { b1.classList.add('show'); t1.style.display='none'; }); }
+    if (t2) { setTimeout(() => t2.style.display='inline-block', 120000); t2.addEventListener('click', () => { b2.classList.add('show'); t2.style.display='none'; }); }
+  })();
+
+  Aufgaben.initCodeChallenge(WAVE_N, 'WIDERSTAND');
+</script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lehrerbereich – Die Welle Escape Game</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .answer-block { margin-bottom: 0.8rem; }
+    .answer-block strong { color: var(--color-accent); display: block; margin-bottom: 0.2rem; font-size: 0.88rem; }
+    .answer-block p { color: var(--color-highlight); font-size: 0.88rem; margin: 0; }
+    .hint-box { background: rgba(245,240,232,0.03); border-left: 3px solid var(--color-highlight); padding: 0.8rem 1rem; margin: 0.5rem 0; font-size: 0.9rem; color: var(--color-highlight); }
+    .wave-answers-section { margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+
+<!-- Password Overlay -->
+<div class="pw-overlay" id="pw-overlay" role="dialog" aria-modal="true" aria-label="Passwortschutz Lehrerbereich">
+  <div class="teacher-login">
+    <h2>Lehrerbereich</h2>
+    <p style="color:var(--color-highlight); margin-bottom:1.5rem; font-size:0.9rem;">Dieser Bereich ist nur für Lehrkräfte. Bitte Passwort eingeben.</p>
+    <input type="password" class="teacher-input" id="pw-input" placeholder="Passwort" autocomplete="current-password" aria-label="Passwort eingeben">
+    <div id="pw-error" style="color:var(--color-error); font-size:0.85rem; margin-bottom:0.8rem; min-height:1.2em;"></div>
+    <button class="btn btn--primary" id="pw-submit" style="width:100%;">Anmelden</button>
+    <p style="margin-top:1.5rem; font-size:0.8rem;"><a href="index.html">← Zurück zum Spiel</a></p>
+  </div>
+</div>
+
+<!-- ===== SITE HEADER ===== -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <a href="index.html" class="site-title">
+      <span>Die</span> Welle
+      <span class="site-title__sub" style="font-size:0.55em; display:block; letter-spacing:0.1em; color:var(--color-highlight); font-family:Georgia,serif; font-weight:normal; text-transform:none;">Lehrerbereich</span>
+    </a>
+    <div class="header-controls">
+      <button class="btn btn--sound" id="sound-toggle" title="Sound umschalten" aria-label="Sound umschalten">🔊</button>
+      <a href="index.html" class="btn btn--ghost" style="font-size:0.75rem;">← Zum Spiel</a>
+    </div>
+  </div>
+</header>
+
+<main class="teacher-area" id="teacher-content" style="display:none;">
+<div class="container">
+
+  <div style="padding: 2rem 0 1rem;">
+    <h1>Lehrerbereich – Übersicht</h1>
+    <p style="color:var(--color-highlight); max-width:680px;">Hier findest du alle Codewörter, korrekten Antworten und didaktischen Hinweise für das Escape Game „Die Welle". Du kannst außerdem den Fortschritt aller Schüler:innen zurücksetzen.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ===== CODEWÖRTER ===== -->
+  <section class="teacher-section" aria-labelledby="codewörter-h2">
+    <h2 id="codewörter-h2">Codewörter aller Wellen</h2>
+    <table class="teacher-table" aria-label="Codewörter der sieben Wellen">
+      <thead>
+        <tr>
+          <th scope="col">Welle</th>
+          <th scope="col">Titel</th>
+          <th scope="col">Codewort</th>
+          <th scope="col">Erläuterung</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Der Funke</td>
+          <td><span class="code-badge">GEHORSAM</span></td>
+          <td>Das zentrale Thema der ersten Welle: blinder Gehorsam gegenüber Autoritäten ist die Voraussetzung für das Experiment und spiegelt die historische Frage nach Mitläufertum wider.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Stärke durch Disziplin</td>
+          <td><span class="code-badge">DISZIPLIN</span></td>
+          <td>Das erste Motto der Welle lautet „Stärke durch Disziplin" – das Codewort ist direkt im Motto enthalten und leicht aus dem Text zu erschließen.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Stärke durch Gemeinschaft</td>
+          <td><span class="code-badge">EINHEIT</span></td>
+          <td>Das zweite Motto „Stärke durch Gemeinschaft" enthält den Kernbegriff EINHEIT – gemeinsam stärker sein als Einzelne, die Basis von Gruppendenken.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Stärke durch Handeln</td>
+          <td><span class="code-badge">AKTION</span></td>
+          <td>Das dritte Motto „Stärke durch Handeln" – AKTION beschreibt das aktive Tun der Wellenmitglieder: Denunziation, Überwachung, erste Gewalt.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Die Andersdenkenden</td>
+          <td><span class="code-badge">WIDERSTAND</span></td>
+          <td>Lauries und Davids Gegenbewegung zur Welle: WIDERSTAND als Gegenteil von blindem Gehorsam – Mut zur eigenen Meinung.</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Der Sog</td>
+          <td><span class="code-badge">KONTROLLE</span></td>
+          <td>Ben Ross verliert die Kontrolle über sein Experiment – KONTROLLE ist das, was er verloren hat und verzweifelt zurückzugewinnen versucht.</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Das Ende der Welle</td>
+          <td><span class="code-badge">FREIHEIT</span></td>
+          <td>FREIHEIT als das, was die Wellenmitglieder durch die Auflösung zurückgewinnen – Gegenbegriff zu Konformität und blindem Gehorsam.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ===== ANTWORTEN ===== -->
+  <section class="teacher-section" aria-labelledby="antworten-h2">
+    <h2 id="antworten-h2">Korrekte Antworten pro Welle</h2>
+
+    <!-- Welle 1 -->
+    <div class="collapsible wave-answers-section">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 1 – Der Funke
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="answer-block">
+          <strong>Aufgabe 1 (Multiple Choice):</strong>
+          <p>Korrekt: <em>b) Sie glauben, sie wären in so einer Situation anders</em> – Die Schüler:innen können sich nicht vorstellen, selbst Mitläufer zu sein.</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 2 (Richtig/Falsch):</strong>
+          <p>Richtig: Ben zeigt Dokumentarfilm ✓ | Falsch: Alle sofort begeistert ✗ | Richtig: Laurie skeptisch ✓ | Falsch: Ben plant von langer Hand ✗</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 3 (Zuordnung):</strong>
+          <p>Ben Ross → Geschichtslehrer | Laurie → Schülerin und Kritikerin | Robert → Außenseiter der Klasse | David → Lauries Freund</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 4 (Sortierung):</strong>
+          <p>1) Dokumentarfilm → 2) Schüler fragen warum Deutsche mitgemacht haben → 3) Ben entscheidet sich für Experiment → 4) Ben formuliert erste Regeln</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 5 (Mehrfachauswahl):</strong>
+          <p>Korrekt ankreuzen: Klare Sitzordnung ✓ | Direkte Antworten ✓ | Schweigen wenn nicht drangerufen ✓ | Aufstehen zum Sprechen ✓<br>NICHT korrekt: Geheimes Erkennungszeichen ✗ | Mitgliedsausweise ✗</p>
+        </div>
+        <div class="answer-block">
+          <strong>Code-Rätsel:</strong>
+          <p>GEHORSAM – das Verhalten, Anweisungen ohne Hinterfragen zu folgen.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welle 2 -->
+    <div class="collapsible wave-answers-section">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 2 – Stärke durch Disziplin
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="answer-block">
+          <strong>Aufgabe 1 (Multiple Choice):</strong>
+          <p>Korrekt: <em>b) Stärke durch Disziplin</em></p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 2 (Richtig/Falsch):</strong>
+          <p>Falsch: Robert war beliebt ✗ | Richtig: Aufrechte Haltung ist Regel ✓ | Richtig: Ben zweifelt ✓ | Richtig: Schüler marschieren ✓</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 3 (Zuordnung):</strong>
+          <p>Motto → Stärke durch Disziplin | Erkennungsmerkmal → Aufrechte Körperhaltung | Veränderter Schüler → Robert Billings | Lauries Reaktion → Skepsis und Unwohlsein</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 4 (Sortierung):</strong>
+          <p>1) Aufrechte Sitzhaltung → 2) Schüler lernen erstes Motto → 3) Robert wird begeistertes Mitglied → 4) Kollektives Sprechen üben</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 5 (Mehrfachauswahl):</strong>
+          <p>Korrekt: Zugehörigkeitsgefühl ✓ | Regeln gelten für alle gleich ✓ | Anerkennung durch Anpassung ✓ | NICHT: Er ist besonders intelligent ✗ | Manipuliert andere ✗</p>
+        </div>
+        <div class="answer-block">
+          <strong>Code-Rätsel:</strong>
+          <p>DISZIPLIN – direkt aus dem Motto „Stärke durch Disziplin" ableitbar.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welle 3 -->
+    <div class="collapsible wave-answers-section">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 3 – Stärke durch Gemeinschaft
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="answer-block">
+          <strong>Aufgabe 1:</strong><p>Korrekt: <em>Stärke durch Gemeinschaft</em></p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 2:</strong><p>Richtig: Amy begeistert ✓ | Falsch: Faust-Gruß ✗ (geschwungene Handbewegung) | Richtig: Ausgrenzung ✓ | Falsch: Laurie freut sich ✗</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 3:</strong>
+          <p>Zweites Motto → Stärke durch Gemeinschaft | Erkennungszeichen → Wellengruß | Begeisterte Freundin → Amy Smith | Konsequenz für Außenstehende → Ausgrenzung</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 4:</strong>
+          <p>1) Zweites Motto → 2) Wellengruß → 3) Ausbreitung auf andere Klassen → 4) Erste Konflikte</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 5:</strong>
+          <p>Korrekt: Erkennungszeichen stärken Wir-Gefühl ✓ | Symbole setzen Grenzen ✓ | Rituale erzeugen Zugehörigkeit ✓ | NICHT: Grüße sind harmlos ✗ | Symbole bedeutungslos ✗</p>
+        </div>
+        <div class="answer-block">
+          <strong>Code-Rätsel:</strong><p>EINHEIT – der Kernbegriff des Gemeinschaftsgefühls.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welle 4 -->
+    <div class="collapsible wave-answers-section">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 4 – Stärke durch Handeln
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="answer-block">
+          <strong>Aufgabe 1:</strong><p>Korrekt: <em>Sie unterscheiden Mitglieder von Nicht-Mitgliedern und verleihen Status</em></p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 2:</strong><p>Richtig: Brian meldet Mitschüler ✓ | Richtig: Schulzeitung druckt kritische Artikel ✓ | Richtig: Körperliche Übergriffe ✓ | Richtig: Ben verbietet Gewalt ✓ (aber zu spät)</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 3:</strong>
+          <p>Brian Ammon → Denunziant | Mitgliedsausweise → Kontrollinstrument | Laurie → Kritikerin in Schulzeitung | Erste Gewalt → Zeichen des Kontrollverlusts</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 4:</strong>
+          <p>1) Mitgliedsausweise → 2) Brian meldet Mitschüler → 3) Laurie schreibt Artikel → 4) Körperliche Auseinandersetzungen</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 5 (NS-Parallelen):</strong>
+          <p>Korrekt: Denunziation ✓ | Abzeichen zur Kennzeichnung ✓ | Unterdrückung freier Meinungsäußerung ✓</p>
+        </div>
+        <div class="answer-block">
+          <strong>Code-Rätsel:</strong><p>AKTION – aktives Handeln, Motto „Stärke durch Handeln".</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welle 5 -->
+    <div class="collapsible wave-answers-section">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 5 – Die Andersdenkenden
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="answer-block">
+          <strong>Aufgabe 1:</strong><p>Korrekt: <em>David will, dass Laurie aufhört, die Welle zu kritisieren; Laurie sieht die Gefahr, David glaubt noch an die Welle</em></p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 2:</strong><p>Richtig: Eltern unterstützen ✓ | Richtig: David schubst ✓ | Richtig: David bereut ✓ | Falsch: Laurie gibt auf ✗</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 3:</strong>
+          <p>Laurie → Hauptkritikerin | Eltern → Besorgte Unterstützer | David → Zerrissen zwischen Welle und Laurie | Ehemalige Mitglieder → Beginnen zu zweifeln</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 4:</strong>
+          <p>1) Streit Laurie/David → 2) David schubst → 3) David bereut → 4) Gemeinsam beschließen sie, die Welle zu stoppen</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 5:</strong>
+          <p>Korrekt: Welle veränderte seinen Charakter ✓ | Gruppendenken zerstört Freundschaften ✓ | Manipulation führt zu Gewalt ✓</p>
+        </div>
+        <div class="answer-block">
+          <strong>Code-Rätsel:</strong><p>WIDERSTAND – was Laurie und David üben, Gegenteil von Gehorsam.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welle 6 -->
+    <div class="collapsible wave-answers-section">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 6 – Der Sog
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="answer-block">
+          <strong>Aufgabe 1:</strong><p>Korrekt: <em>Als er merkt, dass die Welle ein eigenständiges Leben entwickelt hat, das er nicht mehr steuern kann</em></p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 2:</strong><p>Richtig: Robert als Leibwächter ✓ | Falsch: Schulleiter lobt ✗ | Richtig: Ben beschließt Ende ✓ | Falsch: Schüler wissen vom Ende ✗</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 3:</strong>
+          <p>Schulleiter → Konfrontiert Ross | Robert → Leibwächter | Ben → Plant Auflösung | Die Welle → Hat sich verselbständigt</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 4:</strong>
+          <p>1) Unkontrollierte Ausbreitung → 2) Robert wird Leibwächter → 3) Schulleiter stellt Ross zur Rede → 4) Ben beschließt Beendigung</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 5:</strong>
+          <p>Korrekt: Experiment zu lange laufen lassen ✓ | Warnsignale ignoriert ✓ | Eigendynamik unterschätzt ✓</p>
+        </div>
+        <div class="answer-block">
+          <strong>Code-Rätsel:</strong><p>KONTROLLE – das, was Ben verloren hat und zurückgewinnen will.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Welle 7 -->
+    <div class="collapsible wave-answers-section">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 7 – Das Ende der Welle
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="answer-block">
+          <strong>Aufgabe 1:</strong><p>Korrekt: <em>Filmaufnahmen von Hitlers Nürnberger Parteitagen</em></p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 2:</strong><p>Falsch: Nationaler Führer geplant ✗ | Richtig: Schüler erschüttert ✓ | Richtig: Robert weint ✓ | Richtig: Laurie und David finden zusammen ✓</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 3:</strong>
+          <p>Filmaufnahmen → Hitler-Reden als Spiegel | Roberts Reaktion → Weinen und Scham | Bens Absicht → Parallele zur NS-Zeit zeigen | Schülerreaktion → Erschütterung und Reflexion</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 4:</strong>
+          <p>1) Versammlung in Aula → 2) Erwartung nationaler Führer → 3) NS-Propaganda-Aufnahmen → 4) Offizielle Auflösung</p>
+        </div>
+        <div class="answer-block">
+          <strong>Aufgabe 5:</strong>
+          <p>Korrekt: Jede:r kann Teil manipulativer Bewegung werden ✓ | Gruppenidentität verdrängt Individualität ✓ | Aufklärung und kritisches Denken sind Schutz ✓</p>
+        </div>
+        <div class="answer-block">
+          <strong>Code-Rätsel:</strong><p>FREIHEIT – was die Mitglieder durch Auflösung zurückbekommen.</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <hr class="divider">
+
+  <!-- ===== DIDAKTISCHE HINWEISE ===== -->
+  <section class="teacher-section" aria-labelledby="didaktik-h2">
+    <h2 id="didaktik-h2">Didaktische Hinweise</h2>
+
+    <div class="collapsible">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 1 – Einstieg und Kontextualisierung
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="hint-box">
+          <p><strong>Lernziel:</strong> Schüler:innen verstehen, warum gewöhnliche Menschen in autoritären Systemen mitmachen – und erkennen, dass auch sie selbst nicht immun sind.</p>
+          <p><strong>Einstiegsgespräch:</strong> Vor dem Spielen die Frage diskutieren: „Hättest du in Bens Klasse mitgemacht?" – Diese Frage am Ende der Einheit wieder aufgreifen.</p>
+          <p><strong>Differenzierung:</strong> Aufgabe 1 ist für alle zugänglich. Aufgabe 5 eignet sich als Diskussionsgrundlage im Plenum.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapsible">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 2 – Konditionierung und erste Erfolge
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="hint-box">
+          <p><strong>Lernziel:</strong> Mechansimen der Konditionierung durch Wiederholung und Körperhaltung verstehen; Roberts Wandlung als Fallbeispiel für soziale Inklusion durch Konformität.</p>
+          <p><strong>Diskussion:</strong> Warum fühlt sich Robert besser, obwohl er nur Befehle befolgt? → Zugehörigkeit und Anerkennung als menschliche Grundbedürfnisse.</p>
+          <p><strong>Anschluss:</strong> Behaviorismus (Pavlov, Skinner) als kurzen wissenschaftlichen Exkurs einbauen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapsible">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 3 – Gruppenidentität und Symbolik
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="hint-box">
+          <p><strong>Lernziel:</strong> Funktionen von Gruppenritualen und Symbolen analysieren; Ausgrenzungsmechanismen erkennen.</p>
+          <p><strong>Vertiefung:</strong> Vergleich mit anderen Gruppen (Sportvereine, soziale Medien, politische Bewegungen) – wann sind Zugehörigkeitssymbole harmlos, wann gefährlich?</p>
+          <p><strong>Schlüsselstelle:</strong> Amys Begeisterung vs. Lauries Skepsis als Figuren-Kontrast nutzen.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapsible">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 4 – Denunziation und Parallelen zur NS-Zeit
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="hint-box">
+          <p><strong>Lernziel:</strong> Historische Parallelen zur NS-Denunziationskultur verstehen; Meinungsfreiheit als Schutzgut erkennen.</p>
+          <p><strong>Wichtig:</strong> Sensibel auf den NS-Vergleich eingehen – keine Gleichsetzung, sondern Analogie als Lernmittel. Bens Experiment verdeutlicht <em>Mechanismen</em>, nicht Ausmaß.</p>
+          <p><strong>Aufgabe 5</strong> bietet sich als schriftliche Reflexionsaufgabe an.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapsible">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 5 – Widerstand und moralischer Mut
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="hint-box">
+          <p><strong>Lernziel:</strong> Zivilcourage als aktive Haltung verstehen; psychologische Kosten von Widerstand gegen Gruppen erkennen.</p>
+          <p><strong>Diskussion:</strong> Was braucht man, um Nein zu sagen, wenn alle Ja sagen? Welche Risiken hat Laurie? Was motiviert sie trotzdem?</p>
+          <p><strong>Davids Entwicklung</strong> als komplexe Figur: Er ist nicht böse, sondern manipuliert – wichtig für das Verständnis von Mitläufertum.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapsible">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 6 – Lehrerverantwortung und Kontrollverlust
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="hint-box">
+          <p><strong>Lernziel:</strong> Verantwortung von Autoritätspersonen reflektieren; Eigendynamik sozialer Phänomene verstehen.</p>
+          <p><strong>Diskussion:</strong> Ist Ben Ross schuldig? In welchem Moment hätte er eingreifen müssen? Was hätte er anders machen können?</p>
+          <p><strong>Ethik-Anschluss:</strong> Milgram-Experiment und Arendt's „Banalität des Bösen" als Vertiefungstexte anbieten.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapsible">
+      <button class="collapsible__trigger" aria-expanded="false">
+        Welle 7 – Auflösung, Reflexion, Transfer
+        <span class="collapsible__arrow" aria-hidden="true">▼</span>
+      </button>
+      <div class="collapsible__body">
+        <div class="hint-box">
+          <p><strong>Lernziel:</strong> Kritisches Denken als Schutz vor Manipulation erkennen; eigenes Verhalten reflektieren und historische Verantwortung übernehmen.</p>
+          <p><strong>Abschluss:</strong> Rückkehr zur Eingangsfrage: „Hättest du mitgemacht?" – Jetzt differenzierter beantworten.</p>
+          <p><strong>Schreibauftrag:</strong> Brief an Robert Billings nach der Auflösung der Welle – empathisches Schreiben.</p>
+          <p><strong>Transfer:</strong> Wo sehen die Schüler:innen heute ähnliche Mechanismen? (Social Media, Populismus, Fangemeinden)</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <hr class="divider">
+
+  <!-- ===== RESET ===== -->
+  <section class="teacher-section" aria-labelledby="reset-h2">
+    <h2 id="reset-h2">Fortschritt zurücksetzen</h2>
+    <p style="color:var(--color-highlight); margin-bottom:1rem;">Diese Funktion löscht alle gespeicherten Fortschritte im Browser. Nützlich für einen neuen Kursdurchlauf.</p>
+    <div style="display:flex; gap:1rem; flex-wrap:wrap; align-items:center;">
+      <button class="btn btn--danger" id="reset-btn">Alle Fortschritte zurücksetzen</button>
+      <span id="reset-confirm" style="color:var(--color-success-light); font-size:0.88rem; display:none;">✓ Fortschritt wurde zurückgesetzt.</span>
+    </div>
+    <p style="color:var(--color-border); font-size:0.8rem; margin-top:0.6rem;">Hinweis: Es werden nur Daten mit dem Präfix „DW_" gelöscht. Andere Browser-Daten bleiben unberührt.</p>
+  </section>
+
+</div><!-- .container -->
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <p>„Die Welle" Escape Game · Lehrerbereich · Jahrgang 9, E-Kurs</p>
+  </div>
+</footer>
+
+<script src="js/sound.js"></script>
+<script src="js/main.js"></script>
+<script>
+  // Password protection
+  const PASSWORD = 'DieLehrkraft';
+  const overlay  = document.getElementById('pw-overlay');
+  const content  = document.getElementById('teacher-content');
+  const input    = document.getElementById('pw-input');
+  const btn      = document.getElementById('pw-submit');
+  const errMsg   = document.getElementById('pw-error');
+
+  function tryLogin() {
+    if (input.value === PASSWORD) {
+      overlay.classList.add('hidden');
+      content.style.display = 'block';
+    } else {
+      errMsg.textContent = 'Falsches Passwort. Bitte erneut versuchen.';
+      input.value = '';
+      input.classList.add('shake');
+      input.addEventListener('animationend', () => input.classList.remove('shake'), { once: true });
+    }
+  }
+
+  btn.addEventListener('click', tryLogin);
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') tryLogin(); });
+
+  // Collapsibles
+  document.querySelectorAll('.collapsible__trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const expanded = trigger.getAttribute('aria-expanded') === 'true';
+      trigger.setAttribute('aria-expanded', !expanded);
+      const body = trigger.nextElementSibling;
+      body.classList.toggle('open', !expanded);
+    });
+  });
+
+  // Reset button
+  document.getElementById('reset-btn').addEventListener('click', () => {
+    if (confirm('Wirklich alle Fortschritte löschen? Diese Aktion kann nicht rückgängig gemacht werden.')) {
+      DW.clear();
+      const confirm_el = document.getElementById('reset-confirm');
+      confirm_el.style.display = 'inline';
+      setTimeout(() => confirm_el.style.display = 'none', 4000);
+    }
+  });
+</script>
+</body>
+</html>
