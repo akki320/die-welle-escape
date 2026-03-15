@@ -237,6 +237,7 @@
 </footer>
 
 <script src="../js/sound.js"></script>
+<script src="../js/ambient.js"></script>
 <script src="../js/main.js"></script>
 <script src="../js/aufgaben.js"></script>
 <script>
@@ -253,6 +254,7 @@
   if (!DW.isWaveUnlocked(WAVE_N)) window.location.href = '../index.html';
 
   Aufgaben.initWavePage(WAVE_N);
+  AmbientMusic.waitForInteraction(WAVE_N);
   Aufgaben.initMC(WAVE_N, 1, 1);
   Aufgaben.initTF(WAVE_N, 2, ['r','r','r','f']);
   Aufgaben.initAssignment(WAVE_N, 3, []);

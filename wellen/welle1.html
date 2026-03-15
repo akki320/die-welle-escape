@@ -319,6 +319,7 @@
 </footer>
 
 <script src="../js/sound.js"></script>
+<script src="../js/ambient.js"></script>
 <script src="../js/main.js"></script>
 <script src="../js/aufgaben.js"></script>
 <script>
@@ -340,6 +341,7 @@
 
   // Init page
   Aufgaben.initWavePage(WAVE_N);
+  AmbientMusic.waitForInteraction(WAVE_N);
 
   // Task 1: MC – correct answer index 1 (b)
   document.getElementById('mc1-submit').addEventListener('click', () => {});

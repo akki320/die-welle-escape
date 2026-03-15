@@ -104,7 +104,11 @@ const DW = (() => {
       btn.title = SoundManager.isEnabled() ? 'Sound ausschalten' : 'Sound einschalten';
     }
     updateBtn();
-    btn.addEventListener('click', () => { SoundManager.toggle(); updateBtn(); });
+    btn.addEventListener('click', () => {
+      const on = SoundManager.toggle();
+      updateBtn();
+      if (typeof AmbientMusic !== 'undefined') AmbientMusic.setEnabled(on);
+    });
   }
 
   /* --- Confetti --- */
