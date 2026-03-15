@@ -11,6 +11,297 @@
     .answer-block p { color: var(--color-highlight); font-size: 0.88rem; margin: 0; }
     .hint-box { background: rgba(245,240,232,0.03); border-left: 3px solid var(--color-highlight); padding: 0.8rem 1rem; margin: 0.5rem 0; font-size: 0.9rem; color: var(--color-highlight); }
     .wave-answers-section { margin-bottom: 2rem; }
+
+    /* ── Download Card ─────────────────────────────────────── */
+    .doc-download-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      background: linear-gradient(135deg, rgba(139,0,0,0.18) 0%, rgba(15,15,31,0.9) 100%);
+      border: 1px solid var(--color-secondary);
+      border-left: 4px solid var(--color-secondary);
+      border-radius: 6px;
+      padding: 1.5rem 2rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 24px rgba(139,0,0,0.2);
+    }
+    .doc-download-card__icon {
+      font-size: 2.8rem;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .doc-download-card__text { flex: 1; min-width: 220px; }
+    .doc-download-card__text h3 {
+      font-size: 1.15rem;
+      color: var(--color-accent);
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.08em;
+    }
+    .doc-download-card__text p {
+      color: var(--color-highlight);
+      font-size: 0.88rem;
+      margin: 0 0 0.6rem;
+    }
+    .doc-download-card__meta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .doc-meta-badge {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      background: rgba(245,240,232,0.07);
+      border: 1px solid var(--color-border);
+      border-radius: 3px;
+      padding: 0.2rem 0.5rem;
+      color: var(--color-highlight);
+      letter-spacing: 0.05em;
+    }
+    .btn--download {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--color-secondary);
+      color: var(--color-accent);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      font-family: var(--font-headline);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background var(--transition), transform 0.1s;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .btn--download:hover {
+      background: #aa0000;
+      color: var(--color-accent);
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+    .btn--download svg { flex-shrink: 0; }
+
+    /* ── Web-Dokumentation ────────────────────────────────── */
+    .doku-section { margin-bottom: 2.5rem; }
+    .doku-section h3 {
+      font-size: 1rem;
+      color: var(--color-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin: 1.6rem 0 0.5rem;
+      padding-bottom: 0.3rem;
+      border-bottom: 1px solid rgba(139,0,0,0.3);
+    }
+    .doku-section p {
+      color: var(--color-highlight);
+      font-size: 0.88rem;
+      margin-bottom: 0.6rem;
+    }
+    .doku-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 0.8rem;
+    }
+    .doku-section ul li {
+      color: var(--color-highlight);
+      font-size: 0.88rem;
+      padding: 0.25rem 0 0.25rem 1.2rem;
+      position: relative;
+    }
+    .doku-section ul li::before {
+      content: '›';
+      position: absolute;
+      left: 0;
+      color: var(--color-secondary);
+      font-weight: bold;
+    }
+    .doku-lernziele {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin: 0.5rem 0 0.8rem;
+    }
+    .doku-lz {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: 0.87rem;
+      color: var(--color-highlight);
+    }
+    .doku-lz::before {
+      content: '◆';
+      color: var(--color-secondary);
+      font-size: 0.6rem;
+      margin-top: 0.35em;
+      flex-shrink: 0;
+    }
+    .doku-aufgabe {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--color-border);
+      border-radius: 4px;
+      padding: 0.7rem 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .doku-aufgabe__title {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.35rem;
+    }
+    .doku-aufgabe__loesung {
+      font-size: 0.85rem;
+      color: var(--color-highlight);
+      padding-left: 0.8rem;
+      border-left: 2px solid var(--color-success);
+    }
+    .doku-aufgabe__tipp {
+      font-size: 0.82rem;
+      color: #cc9944;
+      padding-left: 0.8rem;
+      border-left: 2px solid #cc9944;
+      margin-top: 0.4rem;
+    }
+    .doku-codewort {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      background: rgba(139,0,0,0.15);
+      border: 1px solid rgba(139,0,0,0.5);
+      border-radius: 4px;
+      padding: 0.6rem 1rem;
+      margin: 0.5rem 0 0.8rem;
+    }
+    .doku-codewort__word {
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: var(--color-secondary);
+      letter-spacing: 0.15em;
+    }
+    .doku-codewort__explain {
+      font-size: 0.83rem;
+      color: var(--color-highlight);
+    }
+    .doku-info-box {
+      background: rgba(245,240,232,0.04);
+      border-left: 3px solid var(--color-success);
+      border-radius: 0 4px 4px 0;
+      padding: 0.8rem 1rem;
+      margin: 0.5rem 0;
+      font-size: 0.87rem;
+      color: var(--color-highlight);
+    }
+    .doku-info-box.warning { border-left-color: var(--color-error); }
+    .doku-info-box strong { color: var(--color-accent); }
+    .doku-reflexion {
+      background: rgba(245,240,232,0.03);
+      border: 1px dashed rgba(192,192,192,0.3);
+      border-radius: 4px;
+      padding: 0.7rem 1rem;
+      margin-top: 0.6rem;
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--color-highlight);
+    }
+    .doku-reflexion::before {
+      content: 'Reflexionsfrage: ';
+      font-style: normal;
+      font-weight: bold;
+      color: var(--color-accent);
+    }
+    .doku-time-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin: 0.5rem 0 1rem;
+    }
+    .doku-time-table th {
+      background: rgba(139,0,0,0.25);
+      color: var(--color-accent);
+      padding: 0.5rem 0.8rem;
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .doku-time-table td {
+      padding: 0.45rem 0.8rem;
+      border-bottom: 1px solid rgba(58,58,92,0.5);
+      color: var(--color-highlight);
+      vertical-align: top;
+    }
+    .doku-time-table tr:hover td { background: rgba(255,255,255,0.03); }
+    .doku-code-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin: 0.5rem 0 1rem;
+    }
+    .doku-code-table th {
+      background: rgba(139,0,0,0.3);
+      color: var(--color-accent);
+      padding: 0.5rem 0.8rem;
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .doku-code-table td {
+      padding: 0.45rem 0.8rem;
+      border-bottom: 1px solid rgba(58,58,92,0.5);
+      color: var(--color-highlight);
+    }
+    .doku-code-table td:nth-child(3) {
+      font-family: var(--font-mono);
+      font-weight: bold;
+      color: var(--color-secondary);
+      letter-spacing: 0.1em;
+    }
+    .doku-code-table tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+
+    /* Tab-Navigation für Dokumentation */
+    .doku-tabs {
+      display: flex;
+      gap: 0.3rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid var(--color-border);
+      padding-bottom: 0;
+    }
+    .doku-tab {
+      background: transparent;
+      border: 1px solid var(--color-border);
+      border-bottom: none;
+      color: var(--color-highlight);
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.45rem 0.9rem;
+      cursor: pointer;
+      border-radius: 4px 4px 0 0;
+      transition: background var(--transition), color var(--transition);
+      position: relative;
+      bottom: -2px;
+    }
+    .doku-tab:hover { background: rgba(255,255,255,0.05); color: var(--color-accent); }
+    .doku-tab.active {
+      background: var(--color-panel);
+      color: var(--color-accent);
+      border-color: var(--color-secondary);
+      border-bottom-color: var(--color-panel);
+    }
+    .doku-panel { display: none; }
+    .doku-panel.active { display: block; }
   </style>
 </head>
 <body>
@@ -46,8 +337,36 @@
 
   <div style="padding: 2rem 0 1rem;">
     <h1>Lehrerbereich – Übersicht</h1>
-    <p style="color:var(--color-highlight); max-width:680px;">Hier findest du alle Codewörter, korrekten Antworten und didaktischen Hinweise für das Escape Game „Die Welle". Du kannst außerdem den Fortschritt aller Schüler:innen zurücksetzen.</p>
+    <p style="color:var(--color-highlight); max-width:680px;">Hier findest du alle Codewörter, korrekten Antworten und didaktischen Hinweise für das Escape Game „Die Welle". Du kannst außerdem den Fortschritt aller Schüler:innen zurücksetzen und die vollständige Dokumentation als Word-Dokument herunterladen.</p>
   </div>
+
+  <!-- ===== DOWNLOAD CARD ===== -->
+  <div class="doc-download-card" role="region" aria-label="Dokumentation herunterladen">
+    <div class="doc-download-card__icon" aria-hidden="true">📄</div>
+    <div class="doc-download-card__text">
+      <h3>Didaktische Dokumentation</h3>
+      <p>Vollständiges Lehrerhandbuch mit allen Lernzielen, Musterlösungen, Zeitplanung, Differenzierungshinweisen und Datenschutzinformationen.</p>
+      <div class="doc-download-card__meta">
+        <span class="doc-meta-badge">Word .docx</span>
+        <span class="doc-meta-badge">ca. 20 Seiten</span>
+        <span class="doc-meta-badge">Jahrgang 9, E-Kurs</span>
+        <span class="doc-meta-badge">Stand: März 2026</span>
+      </div>
+    </div>
+    <a href="assets/docs/DiWelle_Lehrerhandbuch.docx" download="DiWelle_Lehrerhandbuch.docx" class="btn--download" aria-label="Lehrerhandbuch als Word-Dokument herunterladen">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Handbuch herunterladen
+    </a>
+  </div>
+
+  <!-- ===== SCHNELL-NAVIGATION ===== -->
+  <nav style="margin: 0.5rem 0 1rem; display:flex; gap:0.5rem; flex-wrap:wrap;" aria-label="Abschnitte">
+    <a href="#codewörter-h2"    style="font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-highlight);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--color-border);border-radius:3px;" >Codewörter</a>
+    <a href="#antworten-h2"     style="font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-highlight);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--color-border);border-radius:3px;" >Lösungen</a>
+    <a href="#didaktik-h2"      style="font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-highlight);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--color-border);border-radius:3px;" >Didaktik</a>
+    <a href="#doku-h2"          style="font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-highlight);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--color-border);border-radius:3px;background:rgba(139,0,0,0.15);border-color:rgba(139,0,0,0.5);">Vollständige Doku</a>
+    <a href="#reset-h2"         style="font-family:var(--font-mono);font-size:0.75rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--color-highlight);text-decoration:none;padding:0.3rem 0.7rem;border:1px solid var(--color-border);border-radius:3px;" >Reset</a>
+  </nav>
 
   <hr class="divider">
 
@@ -450,6 +769,444 @@
 
   <hr class="divider">
 
+  <!-- ===== VOLLSTÄNDIGE DOKUMENTATION (Webversion) ===== -->
+  <section class="teacher-section" aria-labelledby="doku-h2" id="doku-section">
+    <h2 id="doku-h2">Didaktische Dokumentation – Webversion</h2>
+    <p style="color:var(--color-highlight); margin-bottom:1.2rem; font-size:0.9rem;">Vollständiges Lehrerhandbuch direkt im Browser. Nutze die Tabs zur Navigation oder lade die Dokumentation oben als .docx herunter.</p>
+
+    <!-- Tab Navigation -->
+    <div class="doku-tabs" role="tablist" aria-label="Dokumentationskapitel">
+      <button class="doku-tab active" role="tab" aria-selected="true"  aria-controls="doku-tab-ueberblick"  id="tab-ueberblick" >Überblick</button>
+      <button class="doku-tab"        role="tab" aria-selected="false" aria-controls="doku-tab-einsatz"     id="tab-einsatz"    >Unterricht</button>
+      <button class="doku-tab"        role="tab" aria-selected="false" aria-controls="doku-tab-spielablauf" id="tab-spielablauf">Spielablauf</button>
+      <button class="doku-tab"        role="tab" aria-selected="false" aria-controls="doku-tab-wellen"      id="tab-wellen"     >Wellen 1–7</button>
+      <button class="doku-tab"        role="tab" aria-selected="false" aria-controls="doku-tab-codes"       id="tab-codes"      >Codewörter</button>
+      <button class="doku-tab"        role="tab" aria-selected="false" aria-controls="doku-tab-differenz"   id="tab-differenz"  >Differenzierung</button>
+      <button class="doku-tab"        role="tab" aria-selected="false" aria-controls="doku-tab-dsgvo"       id="tab-dsgvo"      >Datenschutz</button>
+    </div>
+
+    <!-- ── Tab: Überblick ───────────────────────────────────────────── -->
+    <div class="doku-panel active" id="doku-tab-ueberblick" role="tabpanel" aria-labelledby="tab-ueberblick">
+      <div class="doku-section">
+        <h3>Was ist das Escape Game?</h3>
+        <p>»Die Welle – Escape Game« ist eine vollständig browserbasierte, interaktive Lernplattform zur Lektüre <em>Die Welle</em> von Morton Rhue (basierend auf dem realen Third-Wave-Experiment von Ron Jones, 1967). Schüler:innen durchlaufen sieben aufeinander aufbauende Kapitel (»Wellen«), lösen Aufgaben zum Roman und schalten pro abgeschlossenem Kapitel ein Codewort frei.</p>
+
+        <h3>Kernmerkmale</h3>
+        <ul>
+          <li>7 Kapitel mit je 5 Aufgaben steigender Schwierigkeit (★☆☆ bis ★★★)</li>
+          <li>5 Aufgabentypen: Multiple Choice, Richtig/Falsch, Zuordnung, Sortierung, Mehrfachauswahl</li>
+          <li>Freischalt-Mechanik: Jedes Kapitel öffnet sich nur mit dem korrekten Codewort des vorherigen</li>
+          <li>Zweistufiges Tipp-System bei schwierigen Aufgaben (★★★)</li>
+          <li>Passwortgeschützter Lehrerbereich mit allen Lösungen und Hinweisen</li>
+          <li>Gamification: Stempel-Sammlung, Konfetti-Effekte, optionaler Atmosphäre-Sound</li>
+          <li>Datenschutzkonform: kein Login, kein Backend, localStorage only</li>
+          <li>Kostenlos online via GitHub Pages – nutzbar auf PC, Tablet und Smartphone</li>
+        </ul>
+
+        <h3>Systemvoraussetzungen</h3>
+        <ul>
+          <li>Moderner Webbrowser (Chrome, Firefox, Safari, Edge) – keine Installation nötig</li>
+          <li>Internetverbindung für Erstaufruf; danach offline nutzbar</li>
+          <li>Funktioniert auf: PC/Mac, Tablet (iPad/Android), Chromebook, Smartphone</li>
+          <li>JavaScript muss aktiviert sein (Standardeinstellung in allen Browsern)</li>
+        </ul>
+
+        <h3>Zugangsdaten</h3>
+        <div class="doku-info-box warning">
+          <strong>Lehrerbereich:</strong> lehrer.html &nbsp;|&nbsp; <strong>Passwort:</strong> <span style="font-family:var(--font-mono);letter-spacing:0.1em;">DieLehrkraft</span><br>
+          <span style="font-size:0.83rem;">Das Passwort ist im Quellcode einsehbar – bitte nicht an Schüler:innen weitergeben.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Tab: Unterricht ──────────────────────────────────────────── -->
+    <div class="doku-panel" id="doku-tab-einsatz" role="tabpanel" aria-labelledby="tab-einsatz">
+      <div class="doku-section">
+        <h3>Empfohlene Einbettung</h3>
+        <p>Das Escape Game eignet sich als begleitende digitale Lektürearbeit – ergänzend, nicht ersetzend:</p>
+        <ul>
+          <li><strong>Phase 1 – Lektüre:</strong> Schüler:innen lesen den entsprechenden Romanabschnitt</li>
+          <li><strong>Phase 2 – Escape Game:</strong> Selbstständige Bearbeitung der zugehörigen Welle (ca. 20–30 Min.)</li>
+          <li><strong>Phase 3 – Auswertung:</strong> Ergebnisse im Plenum besprechen, Reflexionsfragen diskutieren</li>
+        </ul>
+
+        <h3>Zeitplanung</h3>
+        <table class="doku-time-table" aria-label="Zeitplanung pro Welle">
+          <thead><tr><th>Kapitel</th><th>Zeitbedarf</th><th>Schwerpunkt</th></tr></thead>
+          <tbody>
+            <tr><td>Welle 1 – Der Funke</td><td>20–25 Min.</td><td>Einstieg, alle Aufgaben zugänglich</td></tr>
+            <tr><td>Welle 2 – Stärke durch Disziplin</td><td>20–25 Min.</td><td>Roberts Wandlung als Diskussionsgrundlage</td></tr>
+            <tr><td>Welle 3 – Stärke durch Gemeinschaft</td><td>20–25 Min.</td><td>Symbolik und Gruppenidentität</td></tr>
+            <tr><td>Welle 4 – Stärke durch Handeln</td><td>25–30 Min.</td><td>NS-Parallelen, ethisch sensibel</td></tr>
+            <tr><td>Welle 5 – Die Andersdenkenden</td><td>25–30 Min.</td><td>Zivilcourage, Davids Entwicklung</td></tr>
+            <tr><td>Welle 6 – Der Sog</td><td>20–25 Min.</td><td>Verantwortung und Kontrollverlust</td></tr>
+            <tr><td>Welle 7 – Das Ende der Welle</td><td>25–30 Min.</td><td>Abschluss, Transfer, Reflexion</td></tr>
+          </tbody>
+        </table>
+
+        <h3>Sozialformen</h3>
+        <ul>
+          <li><strong>Einzelarbeit:</strong> Empfohlen – individuelles Lerntempo</li>
+          <li><strong>Partnerarbeit:</strong> Möglich bei ★★★-Aufgaben, fördert Diskurs</li>
+          <li><strong>Hausaufgabe:</strong> Wellen können als Hausaufgabe aufgegeben werden</li>
+        </ul>
+
+        <h3>Lehrplan-Bezüge</h3>
+        <ul>
+          <li>Literarisches Lernen: Textverständnis, Figurenanalyse, Handlungsrekonstruktion</li>
+          <li>Schreiben: Reflexionstexte, Begründungen (Aufgabe 5 jeder Welle)</li>
+          <li>Sprache und Kommunikation: Argumentation, Perspektivübernahme</li>
+          <li>Werteerziehung / Demokratiebildung: Zivilcourage, Gruppenpsychologie, Erinnerungskultur</li>
+          <li>Digitale Kompetenzen: Selbstgesteuertes digitales Lernen</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── Tab: Spielablauf ─────────────────────────────────────────── -->
+    <div class="doku-panel" id="doku-tab-spielablauf" role="tabpanel" aria-labelledby="tab-spielablauf">
+      <div class="doku-section">
+        <h3>Aufgabentypen</h3>
+        <div class="doku-aufgabe">
+          <div class="doku-aufgabe__title">★☆☆ Multiple Choice</div>
+          <div class="doku-aufgabe__loesung">Eine richtige Antwort aus vier Optionen. Sofort-Feedback nach Auswahl. Bei falscher Antwort: Fehlermeldung, erneuter Versuch möglich.</div>
+        </div>
+        <div class="doku-aufgabe">
+          <div class="doku-aufgabe__title">★☆☆ Richtig/Falsch-Tabelle</div>
+          <div class="doku-aufgabe__loesung">Vier Aussagen müssen als richtig oder falsch bewertet werden. Alle Zeilen müssen korrekt sein, um weiterzukommen.</div>
+        </div>
+        <div class="doku-aufgabe">
+          <div class="doku-aufgabe__title">★★☆ Zuordnung – Drag & Drop</div>
+          <div class="doku-aufgabe__loesung">Beschreibungen werden per Drag & Drop (Desktop) oder Antippen (Touch) den richtigen Figuren/Begriffen zugeordnet.</div>
+        </div>
+        <div class="doku-aufgabe">
+          <div class="doku-aufgabe__title">★★☆ Chronologische Sortierung</div>
+          <div class="doku-aufgabe__loesung">Ereignisse werden per Drag & Drop in die richtige Reihenfolge gebracht. Nummerierte Positionen zeigen die Zielposition.</div>
+        </div>
+        <div class="doku-aufgabe">
+          <div class="doku-aufgabe__title">★★★ Mehrfachauswahl mit Begründung</div>
+          <div class="doku-aufgabe__loesung">Mehrere korrekte Antworten ankreuzen + schriftliche Begründung (mind. 1 Satz). Tipp-System verfügbar.</div>
+        </div>
+
+        <h3>Tipp-System</h3>
+        <p>Bei ★★★-Aufgaben erscheinen nach 60 Sekunden und nach weiteren 60 Sekunden je ein Tipp-Button. Die Tipps folgen dem Prinzip »Hinweis, nicht Lösung«: Tipp 1 verweist auf die relevante Textstelle, Tipp 2 schränkt durch Ausschlussverfahren ein.</p>
+
+        <h3>Freischalt-Mechanik und Codewörter</h3>
+        <p>Nach dem erfolgreichen Abschluss aller 5 Aufgaben erscheint das Codewort-Rätsel. Schüler:innen geben das ermittelte Codewort ein (Groß-/Kleinschreibung wird ignoriert). Bei korrekter Eingabe wird die nächste Welle freigeschaltet, ein Konfetti-Effekt läuft ab und der Fortschrittsbalken aktualisiert sich.</p>
+
+        <h3>Reflexionsaufgaben</h3>
+        <p>Am Ende jeder Welle gibt es eine offene Reflexionsfrage. Diese Antworten werden nicht gespeichert und nicht bewertet – sie dienen der persönlichen Auseinandersetzung und können als mündliche Diskussionsgrundlage genutzt werden.</p>
+
+        <h3>Fortschritt zurücksetzen</h3>
+        <p>Im Lehrerbereich können alle Fortschritte mit einem Klick zurückgesetzt werden. Der Reset betrifft nur den aktuellen Browser auf dem aktuellen Gerät. Für neue Kursdurchläufe empfiehlt sich der Inkognito-/Privatmodus für Schüler:innen.</p>
+      </div>
+    </div>
+
+    <!-- ── Tab: Wellen 1–7 ──────────────────────────────────────────── -->
+    <div class="doku-panel" id="doku-tab-wellen" role="tabpanel" aria-labelledby="tab-wellen">
+      <div class="doku-section">
+
+        <!-- Welle 1 -->
+        <div class="collapsible wave-answers-section">
+          <button class="collapsible__trigger doku-wave-trigger" aria-expanded="false">
+            Welle 1 – Der Funke <span class="collapsible__arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="collapsible__body">
+            <div class="doku-codewort">
+              <span class="doku-codewort__word">GEHORSAM</span>
+              <span class="doku-codewort__explain">Blinder Gehorsam gegenüber Autoritäten – Kernthema der ersten Welle</span>
+            </div>
+            <p><strong>Kontext:</strong> April 1969. Ben Ross zeigt seiner Klasse einen Dokumentarfilm über den Holocaust. Als Schüler:innen fragen, warum die Deutschen einfach mitgemacht haben, beschließt Ross spontan ein Unterrichtsexperiment und führt erste Verhaltensregeln ein.</p>
+            <div class="doku-lernziele">
+              <div class="doku-lz">Den historischen Kontext von Massengehorsam verstehen</div>
+              <div class="doku-lz">Blinde Autorität kritisch hinterfragen</div>
+              <div class="doku-lz">Bedingungen erkennen, die Konformität ermöglichen</div>
+            </div>
+            <div class="doku-aufgabe">
+              <div class="doku-aufgabe__title">Aufgabe 1 – Multiple Choice ★☆☆</div>
+              <div class="doku-aufgabe__loesung">b) Sie glauben, sie wären in so einer Situation ganz anders gehandelt – sie hätten sich gewehrt.</div>
+            </div>
+            <div class="doku-aufgabe">
+              <div class="doku-aufgabe__title">Aufgabe 2 – Richtig/Falsch ★☆☆</div>
+              <div class="doku-aufgabe__loesung">Richtig: Ben zeigt Dokumentarfilm ✓ | Laurie ist skeptisch ✓<br>Falsch: Alle sofort begeistert ✗ | Ben hat Experiment langfristig geplant ✗</div>
+            </div>
+            <div class="doku-aufgabe">
+              <div class="doku-aufgabe__title">Aufgabe 3 – Zuordnung ★★☆</div>
+              <div class="doku-aufgabe__loesung">Ben Ross → Geschichtslehrer | Laurie Saunders → Schülerin und Kritikerin<br>Robert Billings → Außenseiter der Klasse | David Collins → Lauries Freund</div>
+            </div>
+            <div class="doku-aufgabe">
+              <div class="doku-aufgabe__title">Aufgabe 4 – Sortierung ★★☆</div>
+              <div class="doku-aufgabe__loesung">1) Dokumentarfilm → 2) Schüler fragen nach dem Warum → 3) Ben entscheidet sich für Experiment → 4) Ben formuliert erste Regeln</div>
+            </div>
+            <div class="doku-aufgabe">
+              <div class="doku-aufgabe__title">Aufgabe 5 – Mehrfachauswahl ★★★</div>
+              <div class="doku-aufgabe__loesung">✓ Klare Sitzordnung und aufrechte Körperhaltung | ✓ Direkte präzise Antworten | ✓ Schweigen wenn nicht drangerufen | ✓ Aufstehen beim Sprechen<br>✗ Geheimes Erkennungszeichen | ✗ Mitgliedsausweise</div>
+              <div class="doku-aufgabe__tipp">Tipp 1: Was macht Ben in der ersten Stunde – bevor die Welle einen Namen hat?<br>Tipp 2: Erkennungszeichen und Ausweise kommen erst später in der Geschichte.</div>
+            </div>
+            <div class="doku-info-box">
+              <strong>Didaktischer Hinweis:</strong> Einstiegsgespräch: »Hättest du mitgemacht?« – Diese Frage am Ende der Einheit wieder aufgreifen. Aufgabe 5 eignet sich als Plenum-Diskussion.
+            </div>
+            <div class="doku-reflexion">Hättest du in Bens Klasse mitgemacht? Was hätte dich dazu verleitet – oder was hätte dich gezögert?</div>
+          </div>
+        </div>
+
+        <!-- Welle 2 -->
+        <div class="collapsible wave-answers-section">
+          <button class="collapsible__trigger doku-wave-trigger" aria-expanded="false">
+            Welle 2 – Stärke durch Disziplin <span class="collapsible__arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="collapsible__body">
+            <div class="doku-codewort">
+              <span class="doku-codewort__word">DISZIPLIN</span>
+              <span class="doku-codewort__explain">Direkt aus dem ersten Motto »Stärke durch Disziplin« ableitbar</span>
+            </div>
+            <p><strong>Kontext:</strong> Das erste Motto der Welle wird eingeführt. Die Klasse übt kollektives Sprechen und aufrechte Körperhaltung. Robert Billings, bisher Klassenversager, blüht auf und findet erstmals Anerkennung.</p>
+            <div class="doku-lernziele">
+              <div class="doku-lz">Mechanismen der Konditionierung durch Wiederholung verstehen</div>
+              <div class="doku-lz">Roberts Wandlung als Fallbeispiel für soziale Inklusion durch Konformität analysieren</div>
+              <div class="doku-lz">Zugehörigkeit als menschliches Grundbedürfnis erkennen</div>
+            </div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 1 – Multiple Choice ★☆☆</div><div class="doku-aufgabe__loesung">b) Stärke durch Disziplin</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 2 – Richtig/Falsch ★☆☆</div><div class="doku-aufgabe__loesung">Falsch: Robert war vorher beliebt ✗ | Richtig: Aufrechte Haltung ist Regel ✓ | Richtig: Ben zweifelt ✓ | Richtig: Schüler marschieren ✓</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 3 – Zuordnung ★★☆</div><div class="doku-aufgabe__loesung">Motto → Stärke durch Disziplin | Erkennungsmerkmal → Aufrechte Körperhaltung<br>Veränderter Schüler → Robert Billings | Lauries Reaktion → Skepsis und Unwohlsein</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 4 – Sortierung ★★☆</div><div class="doku-aufgabe__loesung">1) Aufrechte Sitzhaltung → 2) Schüler lernen erstes Motto → 3) Robert wird begeistertes Mitglied → 4) Kollektives Sprechen üben</div></div>
+            <div class="doku-aufgabe">
+              <div class="doku-aufgabe__title">Aufgabe 5 – Mehrfachauswahl ★★★</div>
+              <div class="doku-aufgabe__loesung">✓ Zugehörigkeitsgefühl | ✓ Regeln gelten für alle gleich | ✓ Anerkennung durch Anpassung<br>✗ Er ist besonders intelligent | ✗ Er manipuliert andere</div>
+            </div>
+            <div class="doku-info-box"><strong>Didaktischer Hinweis:</strong> Warum fühlt sich Robert besser, obwohl er nur Befehle befolgt? Behaviorismus (Pavlov, Skinner) als Exkurs einbauen.</div>
+            <div class="doku-reflexion">Kennst du Situationen, in denen klare Regeln dir ein Gefühl von Sicherheit oder Zugehörigkeit gegeben haben?</div>
+          </div>
+        </div>
+
+        <!-- Welle 3 -->
+        <div class="collapsible wave-answers-section">
+          <button class="collapsible__trigger doku-wave-trigger" aria-expanded="false">
+            Welle 3 – Stärke durch Gemeinschaft <span class="collapsible__arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="collapsible__body">
+            <div class="doku-codewort">
+              <span class="doku-codewort__word">EINHEIT</span>
+              <span class="doku-codewort__explain">Kernbegriff des Gemeinschaftsgefühls – Gruppenidentität auf Kosten Einzelner</span>
+            </div>
+            <p><strong>Kontext:</strong> Das zweite Motto »Stärke durch Gemeinschaft« und ein Erkennungszeichen (geschwungene Handbewegung) werden eingeführt. Amy ist begeistert. Laurie beobachtet erste Ausgrenzungen von Nicht-Mitgliedern.</p>
+            <div class="doku-lernziele">
+              <div class="doku-lz">Funktionen von Gruppenritualen und Symbolen analysieren</div>
+              <div class="doku-lz">Ausgrenzungsmechanismen als Kehrseite von Gruppenidentität erkennen</div>
+              <div class="doku-lz">Den Figuren-Kontrast Amy vs. Laurie literarisch auswerten</div>
+            </div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 1 – Multiple Choice ★☆☆</div><div class="doku-aufgabe__loesung">Stärke durch Gemeinschaft</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 2 – Richtig/Falsch ★☆☆</div><div class="doku-aufgabe__loesung">Richtig: Amy begeistert ✓ | Richtig: Ausgrenzung findet statt ✓<br>Falsch: Gruß ist Faust-Gruß ✗ (geschwungene Bewegung!) | Falsch: Laurie freut sich ✗</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 3 – Zuordnung ★★☆</div><div class="doku-aufgabe__loesung">Zweites Motto → Stärke durch Gemeinschaft | Erkennungszeichen → Wellengruß<br>Begeisterte Freundin → Amy Smith | Konsequenz für Außenstehende → Ausgrenzung</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 4 – Sortierung ★★☆</div><div class="doku-aufgabe__loesung">1) Zweites Motto → 2) Wellengruß → 3) Ausbreitung auf andere Klassen → 4) Erste Konflikte</div></div>
+            <div class="doku-aufgabe">
+              <div class="doku-aufgabe__title">Aufgabe 5 – Mehrfachauswahl ★★★</div>
+              <div class="doku-aufgabe__loesung">✓ Erkennungszeichen stärken Wir-Gefühl | ✓ Symbole setzen Grenzen | ✓ Rituale erzeugen Zugehörigkeit<br>✗ Grüße sind immer harmlos | ✗ Symbole sind bedeutungslos</div>
+            </div>
+            <div class="doku-info-box"><strong>Didaktischer Hinweis:</strong> Vergleich mit Sportfans, Social Media, politischen Bewegungen – wann werden Symbole gefährlich? Amy-Laurie-Kontrast als Figurenanalyse nutzen.</div>
+            <div class="doku-reflexion">Zu welchen Gruppen gehörst du? Wer ist bei euren Erkennungszeichen ausgeschlossen?</div>
+          </div>
+        </div>
+
+        <!-- Welle 4 -->
+        <div class="collapsible wave-answers-section">
+          <button class="collapsible__trigger doku-wave-trigger" aria-expanded="false">
+            Welle 4 – Stärke durch Handeln <span class="collapsible__arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="collapsible__body">
+            <div class="doku-codewort">
+              <span class="doku-codewort__word">AKTION</span>
+              <span class="doku-codewort__explain">Aktives Handeln – drittes Motto »Stärke durch Handeln«, Eskalation zur Gewalt</span>
+            </div>
+            <p><strong>Kontext:</strong> Mitgliedsausweise werden eingeführt. Brian Ammon denunziert Mitschüler:innen. Die Schulzeitung druckt kritische Artikel. Es kommt zu ersten körperlichen Übergriffen. Ben versucht Gewalt zu verbieten – zu spät.</p>
+            <div class="doku-lernziele">
+              <div class="doku-lz">Historische Parallelen zur NS-Denunziationskultur sachlich benennen</div>
+              <div class="doku-lz">Meinungsfreiheit als schützenswertes Gut erkennen</div>
+              <div class="doku-lz">Dynamik von Mitläufertum und aktivem Handeln unterscheiden</div>
+            </div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 1 – Multiple Choice ★☆☆</div><div class="doku-aufgabe__loesung">Sie unterscheiden Mitglieder von Nicht-Mitgliedern und verleihen Status</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 2 – Richtig/Falsch ★☆☆</div><div class="doku-aufgabe__loesung">Alle vier Aussagen richtig: Brian meldet Mitschüler ✓ | Schulzeitung druckt Artikel ✓ | Körperliche Übergriffe ✓ | Ben verbietet Gewalt ✓ (aber zu spät)</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 3 – Zuordnung ★★☆</div><div class="doku-aufgabe__loesung">Brian Ammon → Denunziant | Mitgliedsausweise → Kontrollinstrument<br>Laurie → Kritikerin in Schulzeitung | Erste Gewalt → Zeichen des Kontrollverlusts</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 4 – Sortierung ★★☆</div><div class="doku-aufgabe__loesung">1) Mitgliedsausweise → 2) Brian meldet Mitschüler → 3) Laurie schreibt Artikel → 4) Körperliche Auseinandersetzungen</div></div>
+            <div class="doku-aufgabe">
+              <div class="doku-aufgabe__title">Aufgabe 5 – Mehrfachauswahl ★★★ (NS-Parallelen)</div>
+              <div class="doku-aufgabe__loesung">✓ Denunziation | ✓ Abzeichen zur Kennzeichnung | ✓ Unterdrückung freier Meinungsäußerung</div>
+            </div>
+            <div class="doku-info-box warning"><strong>Wichtig:</strong> NS-Vergleich sachlich behandeln – keine Gleichsetzung, sondern Analogie als Lernmittel. Das Experiment zeigt Mechanismen, nicht das Ausmaß des NS-Terrors. Aufgabe 5 eignet sich als schriftliche Reflexionsaufgabe.</div>
+            <div class="doku-reflexion">Was hättest du an Lauries Stelle getan – den Artikel schreiben oder schweigen?</div>
+          </div>
+        </div>
+
+        <!-- Welle 5 -->
+        <div class="collapsible wave-answers-section">
+          <button class="collapsible__trigger doku-wave-trigger" aria-expanded="false">
+            Welle 5 – Die Andersdenkenden <span class="collapsible__arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="collapsible__body">
+            <div class="doku-codewort">
+              <span class="doku-codewort__word">WIDERSTAND</span>
+              <span class="doku-codewort__explain">Was Laurie und David üben – Gegenteil von blindem Gehorsam</span>
+            </div>
+            <p><strong>Kontext:</strong> Laurie und David streiten: David glaubt noch an die Welle, Laurie sieht die Gefahr. David schubst Laurie und bereut es sofort. Gemeinsam beschließen sie, die Welle zu stoppen.</p>
+            <div class="doku-lernziele">
+              <div class="doku-lz">Zivilcourage als aktive Haltung definieren und bewerten</div>
+              <div class="doku-lz">Psychologische Kosten von Widerstand gegen Gruppen erkennen</div>
+              <div class="doku-lz">Davids Figur als komplexen Mitläufer – nicht als »bösen Menschen« – verstehen</div>
+            </div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 1 – Multiple Choice ★☆☆</div><div class="doku-aufgabe__loesung">David will, dass Laurie aufhört zu kritisieren; Laurie sieht die Gefahr, David glaubt noch an die Welle</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 2 – Richtig/Falsch ★☆☆</div><div class="doku-aufgabe__loesung">Richtig: Eltern unterstützen ✓ | David schubst ✓ | David bereut ✓<br>Falsch: Laurie gibt auf ✗</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 3 – Zuordnung ★★☆</div><div class="doku-aufgabe__loesung">Laurie → Hauptkritikerin | Eltern → Besorgte Unterstützer<br>David → Zerrissen zwischen Welle und Laurie | Ehemalige Mitglieder → Beginnen zu zweifeln</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 4 – Sortierung ★★☆</div><div class="doku-aufgabe__loesung">1) Streit Laurie/David → 2) David schubst → 3) David bereut → 4) Gemeinsam beschließen sie, die Welle zu stoppen</div></div>
+            <div class="doku-aufgabe">
+              <div class="doku-aufgabe__title">Aufgabe 5 – Mehrfachauswahl ★★★</div>
+              <div class="doku-aufgabe__loesung">✓ Welle veränderte seinen Charakter | ✓ Gruppendenken zerstört Freundschaften | ✓ Manipulation führt zu Gewalt</div>
+            </div>
+            <div class="doku-info-box"><strong>Didaktischer Hinweis:</strong> Davids Entwicklung: Er ist nicht böse, sondern manipuliert – das ist der erschreckende Kern des Experiments. Frage: Was braucht man, um Nein zu sagen, wenn alle Ja sagen?</div>
+            <div class="doku-reflexion">Wer hat in deinem Umfeld schon einmal Zivilcourage gezeigt? Was hat das gekostet?</div>
+          </div>
+        </div>
+
+        <!-- Welle 6 -->
+        <div class="collapsible wave-answers-section">
+          <button class="collapsible__trigger doku-wave-trigger" aria-expanded="false">
+            Welle 6 – Der Sog <span class="collapsible__arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="collapsible__body">
+            <div class="doku-codewort">
+              <span class="doku-codewort__word">KONTROLLE</span>
+              <span class="doku-codewort__explain">Was Ben Ross verloren hat und verzweifelt zurückzugewinnen versucht</span>
+            </div>
+            <p><strong>Kontext:</strong> Die Welle entwickelt ein eigenständiges Leben. Robert wird Bens Leibwächter. Der Schulleiter stellt Ben zur Rede. Ben beschließt, das Experiment bei der nächsten Versammlung zu beenden.</p>
+            <div class="doku-lernziele">
+              <div class="doku-lz">Verantwortung von Autoritätspersonen für Folgen ihres Handelns reflektieren</div>
+              <div class="doku-lz">Eigendynamik sozialer Phänomene verstehen</div>
+              <div class="doku-lz">Warnsignale erkennen und benennen</div>
+            </div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 1 – Multiple Choice ★☆☆</div><div class="doku-aufgabe__loesung">Als er merkt, dass die Welle ein eigenständiges Leben entwickelt hat, das er nicht mehr steuern kann</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 2 – Richtig/Falsch ★☆☆</div><div class="doku-aufgabe__loesung">Richtig: Robert als Leibwächter ✓ | Ben beschließt Ende ✓<br>Falsch: Schulleiter lobt ✗ | Schüler wissen vom Ende ✗</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 3 – Zuordnung ★★☆</div><div class="doku-aufgabe__loesung">Schulleiter → Konfrontiert Ross | Robert → Leibwächter<br>Ben → Plant Auflösung | Die Welle → Hat sich verselbständigt</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 4 – Sortierung ★★☆</div><div class="doku-aufgabe__loesung">1) Unkontrollierte Ausbreitung → 2) Robert wird Leibwächter → 3) Schulleiter stellt Ross zur Rede → 4) Ben beschließt Beendigung</div></div>
+            <div class="doku-aufgabe">
+              <div class="doku-aufgabe__title">Aufgabe 5 – Mehrfachauswahl ★★★</div>
+              <div class="doku-aufgabe__loesung">✓ Experiment zu lange laufen lassen | ✓ Warnsignale ignoriert | ✓ Eigendynamik unterschätzt</div>
+            </div>
+            <div class="doku-info-box"><strong>Didaktischer Hinweis:</strong> Ist Ben Ross schuldig? In welchem Moment hätte er eingreifen müssen? Milgram-Experiment und Arendts »Banalität des Bösen« als Vertiefungstexte anbieten.</div>
+            <div class="doku-reflexion">In welchem Moment hätte Ben Ross das Experiment stoppen müssen?</div>
+          </div>
+        </div>
+
+        <!-- Welle 7 -->
+        <div class="collapsible wave-answers-section">
+          <button class="collapsible__trigger doku-wave-trigger" aria-expanded="false">
+            Welle 7 – Das Ende der Welle <span class="collapsible__arrow" aria-hidden="true">▼</span>
+          </button>
+          <div class="collapsible__body">
+            <div class="doku-codewort">
+              <span class="doku-codewort__word">FREIHEIT</span>
+              <span class="doku-codewort__explain">Was die Mitglieder durch die Auflösung zurückgewinnen – Gegenbegriff zu Konformität</span>
+            </div>
+            <p><strong>Kontext:</strong> Ben versammelt die Welle in der Aula. Statt eines nationalen Führers zeigt er Aufnahmen von Hitlers Nürnberger Parteitagen. Die Erschütterung ist tief. Robert weint. Laurie und David finden wieder zueinander.</p>
+            <div class="doku-lernziele">
+              <div class="doku-lz">Kritisches Denken als Schutz vor Manipulation erkennen</div>
+              <div class="doku-lz">Eigenes Verhalten im Lichte des Experiments reflektieren</div>
+              <div class="doku-lz">Historische Verantwortung als persönliche Verantwortung begreifen</div>
+            </div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 1 – Multiple Choice ★☆☆</div><div class="doku-aufgabe__loesung">Filmaufnahmen von Hitlers Nürnberger Parteitagen</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 2 – Richtig/Falsch ★☆☆</div><div class="doku-aufgabe__loesung">Falsch: Nationaler Führer war geplant ✗<br>Richtig: Schüler erschüttert ✓ | Robert weint ✓ | Laurie und David finden zusammen ✓</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 3 – Zuordnung ★★☆</div><div class="doku-aufgabe__loesung">Filmaufnahmen → Hitler-Reden als Spiegel | Roberts Reaktion → Weinen und Scham<br>Bens Absicht → Parallele zur NS-Zeit | Schülerreaktion → Erschütterung und Reflexion</div></div>
+            <div class="doku-aufgabe"><div class="doku-aufgabe__title">Aufgabe 4 – Sortierung ★★☆</div><div class="doku-aufgabe__loesung">1) Versammlung in Aula → 2) Erwartung nationaler Führer → 3) NS-Propaganda-Aufnahmen → 4) Offizielle Auflösung</div></div>
+            <div class="doku-aufgabe">
+              <div class="doku-aufgabe__title">Aufgabe 5 – Mehrfachauswahl ★★★</div>
+              <div class="doku-aufgabe__loesung">✓ Jede:r kann Teil manipulativer Bewegung werden | ✓ Gruppenidentität verdrängt Individualität | ✓ Aufklärung und kritisches Denken sind Schutz</div>
+            </div>
+            <div class="doku-info-box"><strong>Abschluss:</strong> Rückkehr zur Eingangsfrage »Hättest du mitgemacht?« – jetzt differenzierter beantworten. Schreibauftrag: Brief an Robert Billings. Transfer: Wo sehen die Schüler:innen heute ähnliche Mechanismen? (Social Media, Populismus)</div>
+            <div class="doku-reflexion">Was nimmst du mit? Hat sich deine Antwort auf »Hättest du mitgemacht?« verändert?</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ── Tab: Codewörter ──────────────────────────────────────────── -->
+    <div class="doku-panel" id="doku-tab-codes" role="tabpanel" aria-labelledby="tab-codes">
+      <div class="doku-section">
+        <h3>Alle Codewörter auf einen Blick</h3>
+        <p>Diese Tabelle kann als Spickzettel ausgedruckt werden.</p>
+        <table class="doku-code-table" aria-label="Alle Codewörter">
+          <thead><tr><th>Welle</th><th>Titel</th><th>Codewort</th><th>Inhaltliche Bedeutung</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td>Der Funke</td><td>GEHORSAM</td><td>Blinder Gehorsam gegenüber Autoritäten</td></tr>
+            <tr><td>2</td><td>Stärke durch Disziplin</td><td>DISZIPLIN</td><td>Erstes Wellen-Motto, körperliche Konditionierung</td></tr>
+            <tr><td>3</td><td>Stärke durch Gemeinschaft</td><td>EINHEIT</td><td>Gruppenidentität, Auflösung des Individuums</td></tr>
+            <tr><td>4</td><td>Stärke durch Handeln</td><td>AKTION</td><td>Aktives Tun: Denunziation, Ausweise, Gewalt</td></tr>
+            <tr><td>5</td><td>Die Andersdenkenden</td><td>WIDERSTAND</td><td>Lauries und Davids Gegenbewegung, Zivilcourage</td></tr>
+            <tr><td>6</td><td>Der Sog</td><td>KONTROLLE</td><td>Was Ben verloren hat – Kontrollverlust</td></tr>
+            <tr><td>7</td><td>Das Ende der Welle</td><td>FREIHEIT</td><td>Was die Mitglieder durch die Auflösung zurückgewinnen</td></tr>
+          </tbody>
+        </table>
+        <div class="doku-info-box warning" style="margin-top:1rem;">
+          <strong>Hinweis:</strong> Die Codewort-Eingabe ist nicht case-sensitiv. GEHORSAM, gehorsam und Gehorsam werden alle akzeptiert.
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Tab: Differenzierung ─────────────────────────────────────── -->
+    <div class="doku-panel" id="doku-tab-differenz" role="tabpanel" aria-labelledby="tab-differenz">
+      <div class="doku-section">
+        <h3>Für leistungsstärkere Schüler:innen</h3>
+        <ul>
+          <li>Mehrere Wellen in einer Sitzung bearbeiten</li>
+          <li>Vertiefungstexte: Milgram-Experiment, Hannah Arendt »Banalität des Bösen«, Ron Jones' Originalbericht</li>
+          <li>Vergleich mit aktuellen Phänomenen als freie Schreibaufgabe (Social Media, Populismus)</li>
+          <li>Eigene Rätsel für Mitschüler:innen entwerfen</li>
+        </ul>
+        <h3>Für leistungsschwächere Schüler:innen</h3>
+        <ul>
+          <li>Tipp-System bei ★★★-Aufgaben nutzen (erscheint nach 60 und 120 Sekunden)</li>
+          <li>Partnerarbeit ermöglichen: zu zweit am Gerät</li>
+          <li>Lernziele der Welle vorab gemeinsam besprechen (aufklappbar auf der Seite)</li>
+          <li>Bei Bedarf: Lehrkraft gibt Codewort direkt weiter, damit Schüler:innen weitermachen können</li>
+        </ul>
+        <h3>Barrierefreiheit</h3>
+        <ul>
+          <li>Kontrastverhältnis ≥ 4.5:1 (WCAG AA-konform)</li>
+          <li>Keyboard-Navigation möglich (Tab, Enter, Leertaste)</li>
+          <li>Screenreader-kompatibel: ARIA-Labels auf allen interaktiven Elementen</li>
+          <li>Schriftgröße mind. 16 px im Fließtext</li>
+          <li>Touch-optimiert (mind. 44×44 px Klickflächen)</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ── Tab: Datenschutz ─────────────────────────────────────────── -->
+    <div class="doku-panel" id="doku-tab-dsgvo" role="tabpanel" aria-labelledby="tab-dsgvo">
+      <div class="doku-section">
+        <h3>Datenschutz-Übersicht</h3>
+        <ul>
+          <li>Kein Login, keine Registrierung für Schüler:innen erforderlich</li>
+          <li>Keine personenbezogenen Daten werden erhoben oder übertragen</li>
+          <li>Fortschritt wird ausschließlich lokal im Browser (localStorage) gespeichert</li>
+          <li>Kein Backend, kein Server, kein Tracking, keine Cookies</li>
+          <li>Hosting via GitHub Pages (kostenlos, DSGVO-kompatibel einsetzbar)</li>
+        </ul>
+        <div class="doku-info-box warning">
+          <strong>DSGVO-Hinweis für Schulen:</strong><br>
+          Die Plattform erhebt keine personenbezogenen Daten. Eine Einwilligung der Erziehungsberechtigten ist nach aktuellem Stand nicht erforderlich. Empfehlung: Im Rahmen der schulischen Datenschutzerklärung kurz erwähnen. GitHub Pages nutzt möglicherweise technische Cookies (CDN-Infrastruktur). Bei strengen Anforderungen: Dateien lokal auf Schulserver hosten.
+        </div>
+        <h3>Fortschritts-Reset für neue Kursdurchläufe</h3>
+        <ul>
+          <li><strong>Option 1:</strong> Lehrerbereich → »Alle Fortschritte zurücksetzen« (nur auf eigenem Gerät)</li>
+          <li><strong>Option 2:</strong> Schüler:innen öffnen die Seite im Inkognito-/Privatmodus</li>
+          <li><strong>Option 3:</strong> Schüler:innen löschen Browser-Daten für die entsprechende Website</li>
+        </ul>
+        <h3>Quellcode</h3>
+        <p>Der vollständige Quellcode ist öffentlich einsehbar unter: <a href="https://github.com/akki320/die-welle-escape" target="_blank" rel="noopener">github.com/akki320/die-welle-escape</a></p>
+      </div>
+    </div>
+
+  </section>
+
+  <hr class="divider">
+
   <!-- ===== RESET ===== -->
   <section class="teacher-section" aria-labelledby="reset-h2">
     <h2 id="reset-h2">Fortschritt zurücksetzen</h2>
@@ -496,6 +1253,21 @@
 
   btn.addEventListener('click', tryLogin);
   input.addEventListener('keydown', e => { if (e.key === 'Enter') tryLogin(); });
+
+  // Tab-Navigation für Dokumentation
+  document.querySelectorAll('.doku-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.doku-tab').forEach(t => {
+        t.classList.remove('active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.doku-panel').forEach(p => p.classList.remove('active'));
+      tab.classList.add('active');
+      tab.setAttribute('aria-selected', 'true');
+      const target = document.getElementById(tab.getAttribute('aria-controls'));
+      if (target) target.classList.add('active');
+    });
+  });
 
   // Collapsibles
   document.querySelectorAll('.collapsible__trigger').forEach(trigger => {
